@@ -1,0 +1,1353 @@
+[27-May-2025 12:09:19 Europe/Berlin] ============================================
+[27-May-2025 12:09:19 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 12:09:19 Europe/Berlin] ============================================
+[27-May-2025 12:09:19 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 12:09:19 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 12:09:19 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 12:09:19 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 12:09:19 Europe/Berlin] Buffet sale recorded: ID=1, Dishes=1, Total=5000
+[27-May-2025 12:09:19 Europe/Berlin] Buffet item recorded: ID=1, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 12:09:19 Europe/Berlin] SALE ERROR: Failed to prepare discount update statement: Unknown column 'discount_amount' in 'field list'
+[27-May-2025 12:09:19 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"buffet","include_buffet":"1","buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["10"],"accompaniment_qty":["1"],"accompaniment_price":["5000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 12:09:42 Europe/Berlin] ============================================
+[27-May-2025 12:09:42 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 12:09:42 Europe/Berlin] ============================================
+[27-May-2025 12:09:42 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 12:09:42 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 12:09:42 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 12:09:42 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 12:09:42 Europe/Berlin] Buffet sale recorded: ID=2, Dishes=1, Total=5000
+[27-May-2025 12:09:42 Europe/Berlin] Buffet item recorded: ID=2, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 12:09:42 Europe/Berlin] SALE ERROR: Failed to prepare discount update statement: Unknown column 'discount_amount' in 'field list'
+[27-May-2025 12:09:42 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"buffet","include_buffet":"1","buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["11"],"accompaniment_qty":["1"],"accompaniment_price":["16000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 13:38:44 Europe/Berlin] ============================================
+[27-May-2025 13:38:44 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 13:38:44 Europe/Berlin] ============================================
+[27-May-2025 13:38:44 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 13:38:44 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 13:38:44 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 13:38:44 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 13:38:44 Europe/Berlin] Buffet sale recorded: ID=3, Dishes=1, Total=5000
+[27-May-2025 13:38:44 Europe/Berlin] Buffet item recorded: ID=3, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 13:38:44 Europe/Berlin] SALE ERROR: Failed to prepare discount update statement: Unknown column 'discount_amount' in 'field list'
+[27-May-2025 13:38:44 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"buffet","include_buffet":"1","buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["11"],"accompaniment_qty":["1"],"accompaniment_price":["16000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 14:12:30 Europe/Berlin] ============================================
+[27-May-2025 14:12:30 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 14:12:30 Europe/Berlin] ============================================
+[27-May-2025 14:12:30 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:12:30 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:12:30 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 14:12:30 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 14:12:30 Europe/Berlin] Buffet sale recorded: ID=4, Dishes=1, Total=5000
+[27-May-2025 14:12:30 Europe/Berlin] Buffet item recorded: ID=4, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 14:12:30 Europe/Berlin] SALE ERROR: Failed to prepare discount update statement: Unknown column 'discount_amount' in 'field list'
+[27-May-2025 14:12:30 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"buffet","include_buffet":"1","buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["10"],"accompaniment_qty":["1"],"accompaniment_price":["5000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 14:13:11 Europe/Berlin] ============================================
+[27-May-2025 14:13:11 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 14:13:11 Europe/Berlin] ============================================
+[27-May-2025 14:13:11 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:13:11 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:13:11 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 14:13:11 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 14:13:11 Europe/Berlin] Buffet sale recorded: ID=5, Dishes=1, Total=5000
+[27-May-2025 14:13:11 Europe/Berlin] Buffet item recorded: ID=5, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 14:13:11 Europe/Berlin] SALE ERROR: Failed to prepare discount update statement: Unknown column 'discount_amount' in 'field list'
+[27-May-2025 14:13:11 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"buffet","include_buffet":"1","buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["10"],"accompaniment_qty":["1"],"accompaniment_price":["5000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 14:13:27 Europe/Berlin] ============================================
+[27-May-2025 14:13:27 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 14:13:27 Europe/Berlin] ============================================
+[27-May-2025 14:13:27 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => menu
+    [include_menu] => 1
+    [include_drink] => 1
+    [include_buffet] => 1
+    [menu_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 11
+                    [quantity] => 1
+                    [total_price] => 16000.00
+                )
+
+        )
+
+    [drink_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 9
+                    [quantity] => 1
+                    [total_price] => 35000.00
+                )
+
+        )
+
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:13:27 Europe/Berlin] Processing MENU sale
+[27-May-2025 14:13:27 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 14:13:27 Europe/Berlin] Processing menu sale: [{"item_id":"11","quantity":"1","total_price":"16000.00"}]
+[27-May-2025 14:13:27 Europe/Berlin] SALE ERROR: Item (ID: 1) has zero stock; cannot proceed.
+[27-May-2025 14:13:27 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"menu","include_menu":"1","include_drink":"1","include_buffet":"1","menu_items":[{"item_id":"11","quantity":"1","total_price":"16000.00"}],"drink_items":[{"item_id":"9","quantity":"1","total_price":"35000.00"}],"buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["10"],"accompaniment_qty":["1"],"accompaniment_price":["5000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 14:13:55 Europe/Berlin] ============================================
+[27-May-2025 14:13:55 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 14:13:55 Europe/Berlin] ============================================
+[27-May-2025 14:13:55 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:13:55 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:13:55 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 14:13:55 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 14:13:55 Europe/Berlin] Buffet sale recorded: ID=6, Dishes=1, Total=5000
+[27-May-2025 14:13:55 Europe/Berlin] Buffet item recorded: ID=6, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 14:13:55 Europe/Berlin] SALE ERROR: Failed to prepare discount update statement: Unknown column 'discount_amount' in 'field list'
+[27-May-2025 14:13:55 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"buffet","include_buffet":"1","buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["11"],"accompaniment_qty":["1"],"accompaniment_price":["16000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 14:20:22 Europe/Berlin] ============================================
+[27-May-2025 14:20:22 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 14:20:22 Europe/Berlin] ============================================
+[27-May-2025 14:20:22 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:20:22 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:20:22 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 14:20:22 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 14:20:22 Europe/Berlin] Buffet sale recorded: ID=7, Dishes=1, Total=5000
+[27-May-2025 14:20:22 Europe/Berlin] Buffet item recorded: ID=7, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 14:20:22 Europe/Berlin] SALE ERROR: Failed to prepare discount update statement: Unknown column 'discount_amount' in 'field list'
+[27-May-2025 14:20:22 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"buffet","include_buffet":"1","buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["11"],"accompaniment_qty":["1"],"accompaniment_price":["16000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 14:21:00 Europe/Berlin] ============================================
+[27-May-2025 14:21:00 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 14:21:00 Europe/Berlin] ============================================
+[27-May-2025 14:21:00 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:21:00 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:21:00 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 14:21:00 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 14:21:00 Europe/Berlin] Buffet sale recorded: ID=8, Dishes=1, Total=5000
+[27-May-2025 14:21:00 Europe/Berlin] Buffet item recorded: ID=8, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 14:21:00 Europe/Berlin] SALE ERROR: Failed to prepare discount update statement: Unknown column 'discount_amount' in 'field list'
+[27-May-2025 14:21:00 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"buffet","include_buffet":"1","buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["10"],"accompaniment_qty":["1"],"accompaniment_price":["5000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 14:29:33 Europe/Berlin] ============================================
+[27-May-2025 14:29:33 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 14:29:33 Europe/Berlin] ============================================
+[27-May-2025 14:29:33 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:29:33 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:29:33 Europe/Berlin] Validation passed, proceeding with sale processing
+[27-May-2025 14:29:33 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 14:29:33 Europe/Berlin] Buffet sale recorded: ID=9, Dishes=1, Total=5000
+[27-May-2025 14:29:33 Europe/Berlin] Buffet item recorded: ID=9, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 14:29:33 Europe/Berlin] SALE ERROR: Failed to prepare discount update statement: Unknown column 'discount_amount' in 'field list'
+[27-May-2025 14:29:33 Europe/Berlin] SALE ERROR DETAILS: {"sale_type":"buffet","include_buffet":"1","buffet_date":"2025-05-27","buffet_time":"Noon","dishes_sold":"1","buffet_price":"10000","allow_accompaniments":"1","accompaniment_id":["10"],"accompaniment_qty":["1"],"accompaniment_price":["5000.00"],"allow_discount":"1","discount_amount":"5000","discount_reason":"","total_amount":"5000.00"}
+[27-May-2025 14:37:19 Europe/Berlin] ============================================
+[27-May-2025 14:37:19 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 14:37:19 Europe/Berlin] ============================================
+[27-May-2025 14:37:19 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:37:19 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 14:37:19 Europe/Berlin] Buffet sale recorded: ID=10, Dishes=1, Total=5000
+[27-May-2025 14:37:19 Europe/Berlin] Buffet item recorded: ID=10, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 14:37:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in D:\MyApp\app\Admin\sell_item_action.php:155
+Stack trace:
+#0 {main}
+  thrown in D:\MyApp\app\Admin\sell_item_action.php on line 155
+[27-May-2025 14:37:35 Europe/Berlin] ============================================
+[27-May-2025 14:37:35 Europe/Berlin] ===== SELL ITEM ACTION CALLED - DETAILED =====
+[27-May-2025 14:37:35 Europe/Berlin] ============================================
+[27-May-2025 14:37:35 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:37:35 Europe/Berlin] Processing buffet sale: Dishes=1, Price=10000
+[27-May-2025 14:37:35 Europe/Berlin] Buffet sale recorded: ID=11, Dishes=1, Total=5000
+[27-May-2025 14:37:35 Europe/Berlin] Buffet item recorded: ID=11, Date=2025-05-27, Time=Noon, Price=10000
+[27-May-2025 14:37:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in D:\MyApp\app\Admin\sell_item_action.php:155
+Stack trace:
+#0 {main}
+  thrown in D:\MyApp\app\Admin\sell_item_action.php on line 155
+[27-May-2025 14:49:45 Europe/Berlin] ============================================
+[27-May-2025 14:49:45 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 14:49:45
+[27-May-2025 14:49:45 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:49:45 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:49:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in D:\MyApp\app\Admin\sell_item_action.php:163
+Stack trace:
+#0 {main}
+  thrown in D:\MyApp\app\Admin\sell_item_action.php on line 163
+[27-May-2025 14:49:52 Europe/Berlin] ============================================
+[27-May-2025 14:49:52 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 14:49:52
+[27-May-2025 14:49:52 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:49:52 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:49:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in D:\MyApp\app\Admin\sell_item_action.php:163
+Stack trace:
+#0 {main}
+  thrown in D:\MyApp\app\Admin\sell_item_action.php on line 163
+[27-May-2025 14:50:54 Europe/Berlin] ============================================
+[27-May-2025 14:50:54 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 14:50:54
+[27-May-2025 14:50:54 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:50:54 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:50:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in D:\MyApp\app\Admin\sell_item_action.php:163
+Stack trace:
+#0 {main}
+  thrown in D:\MyApp\app\Admin\sell_item_action.php on line 163
+[27-May-2025 14:57:05 Europe/Berlin] ============================================
+[27-May-2025 14:57:05 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 14:57:05
+[27-May-2025 14:57:05 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:57:05 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:57:05 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 14:57:05 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #10 with price 5000
+[27-May-2025 14:57:05 Europe/Berlin] Successfully applied discount of 5000 with reason: 
+[27-May-2025 14:57:05 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 14:57:15 Europe/Berlin] ============================================
+[27-May-2025 14:57:15 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 14:57:15
+[27-May-2025 14:57:15 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:57:15 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:57:15 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 14:57:15 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #11 with price 16000
+[27-May-2025 14:57:15 Europe/Berlin] SALE ERROR: Item (ID: 1) has zero stock.
+[27-May-2025 14:57:36 Europe/Berlin] ============================================
+[27-May-2025 14:57:36 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 14:57:36
+[27-May-2025 14:57:36 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:57:36 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:57:36 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 14:57:36 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #10 with price 5000
+[27-May-2025 14:57:36 Europe/Berlin] SALE ERROR: Item (ID: 1) has zero stock.
+[27-May-2025 14:58:20 Europe/Berlin] ============================================
+[27-May-2025 14:58:20 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 14:58:20
+[27-May-2025 14:58:20 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 14:58:20 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 14:58:20 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 14:58:20 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #10 with price 5000
+[27-May-2025 14:58:20 Europe/Berlin] SALE ERROR: Item (ID: 1) has zero stock.
+[27-May-2025 15:06:26 Europe/Berlin] ============================================
+[27-May-2025 15:06:26 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:06:26
+[27-May-2025 15:06:26 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 12000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 12000.00
+)
+
+[27-May-2025 15:06:26 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:06:26 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 15:06:26 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #10 with price 5000
+[27-May-2025 15:06:27 Europe/Berlin] SALE ERROR: Rice has zero stock available.
+[27-May-2025 15:08:54 Europe/Berlin] ============================================
+[27-May-2025 15:08:54 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:08:54
+[27-May-2025 15:08:54 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 10000
+    [discount_reason] => 
+    [total_amount] => 10000.00
+)
+
+[27-May-2025 15:08:54 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:08:54 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 15:08:54 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #10 with price 5000
+[27-May-2025 15:08:54 Europe/Berlin] SALE ERROR: Rice has zero stock available.
+[27-May-2025 15:09:07 Europe/Berlin] ============================================
+[27-May-2025 15:09:07 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:09:07
+[27-May-2025 15:09:07 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 5000
+    [discount_reason] => 
+    [total_amount] => 5000.00
+)
+
+[27-May-2025 15:09:07 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:09:07 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 15:09:07 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #10 with price 5000
+[27-May-2025 15:09:07 Europe/Berlin] SALE ERROR: Rice has zero stock available.
+[27-May-2025 15:09:28 Europe/Berlin] ============================================
+[27-May-2025 15:09:28 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:09:28
+[27-May-2025 15:09:28 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 10000
+    [discount_reason] => 
+    [total_amount] => 10000.00
+)
+
+[27-May-2025 15:09:28 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:09:28 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 15:09:28 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #11 with price 16000
+[27-May-2025 15:09:28 Europe/Berlin] SALE ERROR: Rice has zero stock available.
+[27-May-2025 15:11:36 Europe/Berlin] ============================================
+[27-May-2025 15:11:36 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:11:36
+[27-May-2025 15:11:36 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 10000
+    [discount_reason] => 
+    [total_amount] => 10000.00
+)
+
+[27-May-2025 15:11:36 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:11:36 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 15:11:36 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #11 with price 16000
+[27-May-2025 15:11:36 Europe/Berlin] SALE ERROR: Rice has zero stock available.
+[27-May-2025 15:13:39 Europe/Berlin] ============================================
+[27-May-2025 15:13:39 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:13:39
+[27-May-2025 15:13:39 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 10
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 5000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 10000
+    [discount_reason] => 
+    [total_amount] => 10000.00
+)
+
+[27-May-2025 15:13:39 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:13:39 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 15:13:39 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #10 with price 5000
+[27-May-2025 15:13:39 Europe/Berlin] Successfully applied discount of 10000 with reason: 
+[27-May-2025 15:13:39 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 15:13:50 Europe/Berlin] ============================================
+[27-May-2025 15:13:50 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:13:50
+[27-May-2025 15:13:50 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [allow_discount] => 1
+    [discount_amount] => 10000
+    [discount_reason] => 
+    [total_amount] => 10000.00
+)
+
+[27-May-2025 15:13:50 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:13:50 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 15:13:50 Europe/Berlin] Successfully inserted accompaniment: Accompaniment #11 with price 16000
+[27-May-2025 15:13:50 Europe/Berlin] Successfully applied discount of 10000 with reason: 
+[27-May-2025 15:13:50 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 15:16:37 Europe/Berlin] ============================================
+[27-May-2025 15:16:37 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:16:37
+[27-May-2025 15:16:37 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => menu
+    [include_menu] => 1
+    [menu_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 10
+                    [quantity] => 1
+                    [total_price] => 5000.00
+                )
+
+        )
+
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000
+)
+
+[27-May-2025 15:16:37 Europe/Berlin] Processing MENU sale
+[27-May-2025 15:16:37 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 15:22:14 Europe/Berlin] ============================================
+[27-May-2025 15:22:14 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:22:14
+[27-May-2025 15:22:14 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [allow_discount] => 1
+    [discount_amount] => 10000
+    [discount_reason] => 
+    [total_amount] => 10000.00
+)
+
+[27-May-2025 15:22:14 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:22:14 Europe/Berlin] Successfully applied discount of 10000 with reason: 
+[27-May-2025 15:22:14 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 15:40:24 Europe/Berlin] ============================================
+[27-May-2025 15:40:24 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:40:24
+[27-May-2025 15:40:24 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[27-May-2025 15:40:24 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:40:24 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 15:50:06 Europe/Berlin] ============================================
+[27-May-2025 15:50:06 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:50:06
+[27-May-2025 15:50:06 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 11
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 16000.00
+        )
+
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[27-May-2025 15:50:06 Europe/Berlin] Processing BUFFET sale
+[27-May-2025 15:50:06 Europe/Berlin] Failed to prepare menu query: Table 'mazarestobar.menu' doesn't exist
+[27-May-2025 15:50:06 Europe/Berlin] Successfully inserted accompaniment for menu_id: 11 with price 16000
+[27-May-2025 15:50:06 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 15:58:20 Europe/Berlin] ============================================
+[27-May-2025 15:58:20 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 15:58:20
+[27-May-2025 15:58:20 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => menu
+    [include_menu] => 1
+    [menu_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 10
+                    [quantity] => 1
+                    [total_price] => 5000.00
+                )
+
+        )
+
+)
+
+[27-May-2025 15:58:20 Europe/Berlin] Processing MENU sale
+[27-May-2025 15:58:20 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 16:22:13 Europe/Berlin] ============================================
+[27-May-2025 16:22:13 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 16:22:13
+[27-May-2025 16:22:13 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => drink
+    [include_drink] => 1
+    [drink_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 16
+                    [quantity] => 1
+                    [total_price] => 3500.00
+                )
+
+        )
+
+)
+
+[27-May-2025 16:22:13 Europe/Berlin] Processing DRINK sale
+[27-May-2025 16:22:13 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 16:30:29 Europe/Berlin] ============================================
+[27-May-2025 16:30:29 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 16:30:29
+[27-May-2025 16:30:29 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => menu
+    [include_menu] => 1
+    [menu_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 10
+                    [quantity] => 2
+                    [total_price] => 10000.00
+                )
+
+        )
+
+)
+
+[27-May-2025 16:30:29 Europe/Berlin] Processing MENU sale
+[27-May-2025 16:30:29 Europe/Berlin] Sale processed and committed successfully
+[27-May-2025 16:30:45 Europe/Berlin] ============================================
+[27-May-2025 16:30:45 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-05-27 16:30:45
+[27-May-2025 16:30:45 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => menu
+    [include_menu] => 1
+    [include_buffet] => 1
+    [menu_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 10
+                    [quantity] => 2
+                    [total_price] => 10000.00
+                )
+
+        )
+
+    [buffet_date] => 2025-05-27
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[27-May-2025 16:30:45 Europe/Berlin] Processing MENU sale
+[27-May-2025 16:30:45 Europe/Berlin] Sale processed and committed successfully
+[03-Jun-2025 10:06:42 Europe/Berlin] ============================================
+[03-Jun-2025 10:06:42 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-06-03 10:06:42
+[03-Jun-2025 10:06:42 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-06-03
+    [buffet_time] => Morning
+    [dishes_sold] => 1
+    [buffet_price] => 15000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 15000.00
+)
+
+[03-Jun-2025 10:06:42 Europe/Berlin] Processing BUFFET sale
+[03-Jun-2025 10:06:42 Europe/Berlin] Sale processed and committed successfully
+[03-Jun-2025 10:17:50 Europe/Berlin] ============================================
+[03-Jun-2025 10:17:50 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-06-03 10:17:50
+[03-Jun-2025 10:17:50 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-06-03
+    [buffet_time] => Morning
+    [dishes_sold] => 1
+    [buffet_price] => 15000
+    [allow_discount] => 1
+    [discount_amount] => 6000
+    [discount_reason] => 
+    [total_amount] => 9000.00
+)
+
+[03-Jun-2025 10:17:50 Europe/Berlin] Processing BUFFET sale
+[03-Jun-2025 10:17:50 Europe/Berlin] Successfully applied discount of 6000 with reason: 
+[03-Jun-2025 10:17:50 Europe/Berlin] Sale processed and committed successfully
+[03-Jun-2025 10:24:27 Europe/Berlin] ============================================
+[03-Jun-2025 10:24:27 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-06-03 10:24:27
+[03-Jun-2025 10:24:27 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-06-03
+    [buffet_time] => Morning
+    [dishes_sold] => 1
+    [buffet_price] => 15000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 15000.00
+)
+
+[03-Jun-2025 10:24:27 Europe/Berlin] Processing BUFFET sale
+[03-Jun-2025 10:24:27 Europe/Berlin] Sale processed and committed successfully
+[03-Jun-2025 11:28:03 Europe/Berlin] ============================================
+[03-Jun-2025 11:28:03 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-06-03 11:28:03
+[03-Jun-2025 11:28:03 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-06-03
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 10000.00
+)
+
+[03-Jun-2025 11:28:03 Europe/Berlin] Processing BUFFET sale
+[03-Jun-2025 11:28:03 Europe/Berlin] Sale processed and committed successfully
+[03-Jun-2025 11:38:50 Europe/Berlin] ============================================
+[03-Jun-2025 11:38:50 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-06-03 11:38:50
+[03-Jun-2025 11:38:50 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-06-03
+    [buffet_time] => Noon
+    [dishes_sold] => 1
+    [buffet_price] => 10000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 10000.00
+)
+
+[03-Jun-2025 11:38:50 Europe/Berlin] Processing BUFFET sale
+[03-Jun-2025 11:38:50 Europe/Berlin] Sale processed and committed successfully
+[03-Jun-2025 15:06:24 Europe/Berlin] ============================================
+[03-Jun-2025 15:06:24 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-06-03 15:06:24
+[03-Jun-2025 15:06:24 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => menu
+    [include_menu] => 1
+    [menu_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 12
+                    [quantity] => 10
+                    [total_price] => 50000.00
+                )
+
+        )
+
+)
+
+[03-Jun-2025 15:06:24 Europe/Berlin] Processing MENU sale
+[03-Jun-2025 15:06:24 Europe/Berlin] SALE ERROR: Inventory item 1 not found.
+[03-Jun-2025 15:06:28 Europe/Berlin] ============================================
+[03-Jun-2025 15:06:28 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-06-03 15:06:28
+[03-Jun-2025 15:06:28 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => menu
+    [include_menu] => 1
+    [menu_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 12
+                    [quantity] => 10
+                    [total_price] => 50000.00
+                )
+
+        )
+
+)
+
+[03-Jun-2025 15:06:28 Europe/Berlin] Processing MENU sale
+[03-Jun-2025 15:06:28 Europe/Berlin] SALE ERROR: Inventory item 1 not found.
+[03-Jun-2025 15:09:12 Europe/Berlin] ============================================
+[03-Jun-2025 15:09:12 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-06-03 15:09:12
+[03-Jun-2025 15:09:12 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => menu
+    [include_menu] => 1
+    [menu_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 12
+                    [quantity] => 2
+                    [total_price] => 10000.00
+                )
+
+        )
+
+)
+
+[03-Jun-2025 15:09:12 Europe/Berlin] Processing MENU sale
+[03-Jun-2025 15:09:12 Europe/Berlin] Sale processed and committed successfully

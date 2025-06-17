@@ -1,0 +1,464 @@
+2025-05-29 19:21:41 - Process Error: Request received: Array
+(
+    [action] => test
+    [test_data] => This is a test
+)
+2025-05-29 19:23:55 - Process Error: Request received: Array
+(
+    [action] => test
+    [test_data] => This is a test
+)
+2025-05-29 19:24:17 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Itangishaka John Esterique
+    [telephone] => 68072105
+    [email] => itangishakajohnesterique@gmail.com
+    [adresse] => Av. Ntare Rugamba
+    [poste] => Informaticien
+    [date_embauche] => 2025-05-29
+    [salaire] => 1000000
+    [actif] => 1
+    [note] => 
+)
+2025-05-29 19:38:38 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:38:53 - Process Error: Request received: Array
+(
+    [action] => edit
+    [id] => 1
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 60000
+    [telephone] => 123-456-7890
+    [actif] => 1
+)
+2025-05-29 19:39:11 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 1
+)
+2025-05-29 19:39:16 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 1
+)
+2025-05-29 19:39:22 - Process Error: Request received: Array
+(
+    [action] => view
+    [id] => 1
+)
+2025-05-29 19:39:29 - Process Error: Request received: Array
+(
+    [action] => list
+)
+2025-05-29 19:40:56 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 2
+)
+2025-05-29 19:41:03 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 2
+)
+2025-05-29 19:41:18 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:41:22 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:41:24 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:41:39 - Process Error: Request received: Array
+(
+    [action] => edit
+    [id] => 1
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 60000
+    [telephone] => 123-456-7890
+    [actif] => 1
+)
+2025-05-29 19:41:57 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 1
+)
+2025-05-29 19:42:02 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 1
+)
+2025-05-29 19:42:04 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 1
+)
+2025-05-29 19:42:15 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 1
+)
+2025-05-29 19:42:22 - Process Error: Request received: Array
+(
+    [action] => view
+    [id] => 1
+)
+2025-05-29 19:44:22 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 3
+)
+2025-05-29 19:44:30 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 4
+)
+2025-05-29 19:44:43 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:44:45 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 4
+)
+2025-05-29 19:44:56 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 4
+)
+2025-05-29 19:45:05 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 4
+)
+2025-05-29 19:45:13 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:45:26 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 4
+)
+2025-05-29 19:47:57 - Process Error: Request received: Array
+(
+    [action] => edit
+    [id] => 5
+    [nom] => Itangishaka John Esterique
+    [telephone] => 68072105
+    [email] => itangishakajohnesterique@gmail.com
+    [adresse] => Av. Ntare Rugamba
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000.00
+    [actif] => 1
+    [note] => 
+)
+2025-05-29 19:48:10 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:48:17 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:48:43 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:48:56 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:49:12 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:49:12 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:49:13 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:49:13 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:49:13 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:49:13 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:49:13 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:49:14 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:49:14 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Test Employee
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 50000
+    [telephone] => 123-456-7890
+)
+2025-05-29 19:49:39 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 6
+)
+2025-05-29 19:49:42 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 7
+)
+2025-05-29 19:49:49 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 11
+)
+2025-05-29 19:49:52 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 13
+)
+2025-05-29 19:49:55 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 14
+)
+2025-05-29 19:50:09 - Process Error: Request received: Array
+(
+    [action] => edit
+    [id] => 8
+    [nom] => Test Employee
+    [telephone] => 123-456-7890
+    [email] => 
+    [adresse] => 
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 1000000
+    [actif] => 1
+    [note] => 
+)
+2025-05-29 19:50:32 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 9
+)
+2025-05-29 19:50:35 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 12
+)
+2025-05-29 19:50:40 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 10
+)
+2025-05-29 19:50:44 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 8
+)
+2025-05-29 19:51:07 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => Itangishaka John Esterique
+    [telephone] => 68072105
+    [email] => itangishakajohnesterique@gmail.com
+    [adresse] => Av. Ntare Rugamba
+    [poste] => Informaticien
+    [date_embauche] => 2025-05-29
+    [salaire] => 1000000
+    [actif] => 1
+    [note] => 
+)
+2025-05-29 19:52:26 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:52:38 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:52:44 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:52:54 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 15
+)
+2025-05-29 19:53:11 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 15
+)
+2025-05-29 19:58:58 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:59:04 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 19:59:10 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 15
+)
+2025-05-29 19:59:26 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 15
+)
+2025-05-29 19:59:29 - Process Error: Request received: Array
+(
+    [action] => toggle_status
+    [id] => 5
+)
+2025-05-29 20:00:51 - Process Error: Request received: Array
+(
+    [action] => edit
+    [id] => 5
+    [nom] => Itangishaka John Esterique
+    [telephone] => 68072105
+    [email] => itangishakajohnesterique@gmail.com
+    [adresse] => Av. Ntare Rugamba
+    [poste] => Test Position
+    [date_embauche] => 2025-01-01
+    [salaire] => 2000000
+    [actif] => 1
+    [note] => 
+)
+2025-05-29 20:09:05 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 15
+)
+2025-06-12 18:16:59 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => HAKIZIMANA Nadjati
+    [telephone] => 68072105
+    [email] => itangishakajohnesterique@gmail.com
+    [adresse] => Carama 8 Av
+Carama 8 Av
+    [poste] => Informaticien
+    [date_embauche] => 2025-06-12
+    [salaire] => 2000000
+    [actif] => 1
+    [note] => 
+)
+2025-06-12 18:17:14 - Process Error: Request received: Array
+(
+    [action] => delete
+    [id] => 16
+)
+2025-06-12 18:21:42 - Process Error: Request received: Array
+(
+    [action] => add
+    [nom] => HAKIZIMANA Nadjati
+    [telephone] => 68072105
+    [email] => itangishakajohnesterique@gmail.com
+    [adresse] => Carama 8 Av
+Carama 8 Av
+    [poste] => Informaticien
+    [date_embauche] => 2025-06-12
+    [salaire] => 1000000
+    [actif] => 1
+    [note] => 
+)

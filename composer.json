@@ -1,0 +1,16 @@
+{
+    "name": "esterique/maza-resto-bar",
+    "autoload": {
+        "psr-4": {
+            "Esterique\\MazaRestoBar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Itangishaka John Esterique"
+        }
+    ],
+    "require": {
+        "tecnickcom/tcpdf": "^6.8"
+    }
+}

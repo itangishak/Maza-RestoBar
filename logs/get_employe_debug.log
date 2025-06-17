@@ -1,0 +1,12 @@
+2025-05-29 19:47:47 - Starting get_employe.php script
+2025-05-29 19:47:47 - Response sent: {"success":true,"employe":{"id":"5","nom":"Test Employee","telephone":"123-456-7890","adresse":"","email":"","poste":"Test Position","date_embauche":"2025-01-01","salaire":"50000.00","actif":"1","note":""}}
+2025-05-29 19:48:23 - Starting get_employe.php script
+2025-05-29 19:48:23 - Response sent: {"success":true,"employe":{"id":"5","nom":"Itangishaka John Esterique","telephone":"68072105","adresse":"Av. Ntare Rugamba","email":"itangishakajohnesterique@gmail.com","poste":"Test Position","date_embauche":"2025-01-01","salaire":"50000.00","actif":"1","note":""}}
+2025-05-29 19:50:01 - Starting get_employe.php script
+2025-05-29 19:50:01 - Response sent: {"success":true,"employe":{"id":"8","nom":"Test Employee","telephone":"123-456-7890","adresse":"","email":"","poste":"Test Position","date_embauche":"2025-01-01","salaire":"50000.00","actif":"1","note":""}}
+2025-05-29 19:50:24 - Starting get_employe.php script
+2025-05-29 19:50:24 - Response sent: {"success":true,"employe":{"id":"8","nom":"Test Employee","telephone":"123-456-7890","adresse":"","email":"","poste":"Test Position","date_embauche":"2025-01-01","salaire":"1000000.00","actif":"1","note":""}}
+2025-05-29 20:00:41 - Starting get_employe.php script
+2025-05-29 20:00:41 - Response sent: {"success":true,"employe":{"id":"5","nom":"Itangishaka John Esterique","telephone":"68072105","adresse":"Av. Ntare Rugamba","email":"itangishakajohnesterique@gmail.com","poste":"Test Position","date_embauche":"2025-01-01","salaire":"50000.00","actif":"1","note":""}}
+2025-05-29 21:28:24 - Starting get_employe.php script
+2025-05-29 21:28:24 - Response sent: {"success":true,"employe":{"id":"5","nom":"Itangishaka John Esterique","telephone":"68072105","adresse":"Av. Ntare Rugamba","email":"itangishakajohnesterique@gmail.com","poste":"Test Position","date_embauche":"2025-01-01","salaire":"2000000.00","actif":"1","note":""}}
