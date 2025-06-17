@@ -1,11 +1,8 @@
 <?php
 session_start();
 require_once 'connection.php';
-// Check if user is logged in
-if (!isset($_SESSION['UserId'])) {
-  header("Location: login.php");
-  exit();
-}
+require_once __DIR__ . '/../includes/auth.php';
+require_privilege(['Boss','Manager','User']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

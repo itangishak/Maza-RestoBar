@@ -7,6 +7,9 @@ if($_SESSION['privilege']=='Manager'){
 else if($_SESSION['privilege']=='Boss'){
     include_once './sidebarboss.php';
 }
+else if($_SESSION['privilege']=='Stock'){
+    include_once './sidebarstock.php';
+}
 else{
     include_once './sidebaruser.php';
 }
