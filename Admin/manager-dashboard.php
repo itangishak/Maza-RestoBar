@@ -20,32 +20,52 @@ $sqlSales = "SELECT COALESCE(SUM(total_price), 0) AS sales
              WHERE status = 'confirmed' 
                AND order_date BETWEEN '$todayStart' AND '$todayEnd'";
 $resSales = $conn->query($sqlSales);
-$rowSales = $resSales->fetch_assoc();
-$todaySales = $rowSales['sales'];
+if ($resSales) {
+    $rowSales = $resSales->fetch_assoc();
+    $todaySales = $rowSales['sales'];
+} else {
+    $todaySales = 0;
+    error_log("Sales query failed: " . $conn->error);
+}
 
 // 2. Inventory Alerts: Count of inventory_items where quantity_in_stock <= reorder_level
 $sqlInv = "SELECT COUNT(*) AS alerts 
            FROM inventory_items 
            WHERE quantity_in_stock <= reorder_level";
 $resInv = $conn->query($sqlInv);
-$rowInv = $resInv->fetch_assoc();
-$inventoryAlerts = $rowInv['alerts'];
+if ($resInv) {
+    $rowInv = $resInv->fetch_assoc();
+    $inventoryAlerts = $rowInv['alerts'];
+} else {
+    $inventoryAlerts = 0;
+    error_log("Inventory alerts query failed: " . $conn->error);
+}
 
 // 3. Open Orders: Count of orders where status = 'pending'
 $sqlOrders = "SELECT COUNT(*) AS openOrders 
               FROM orders 
               WHERE status = 'pending'";
 $resOrders = $conn->query($sqlOrders);
-$rowOrders = $resOrders->fetch_assoc();
-$openOrders = $rowOrders['openOrders'];
+if ($resOrders) {
+    $rowOrders = $resOrders->fetch_assoc();
+    $openOrders = $rowOrders['openOrders'];
+} else {
+    $openOrders = 0;
+    error_log("Open orders query failed: " . $conn->error);
+}
 
 // 4. Today's Attendance - Absent count from attendance_records for today
 $sqlAtt = "SELECT COUNT(*) AS absentCount 
            FROM attendance_records 
            WHERE attendance_date = '$todaysDate' AND status = 'Absent'";
 $resAtt = $conn->query($sqlAtt);
-$rowAtt = $resAtt->fetch_assoc();
-$absentCount = $rowAtt['absentCount'];
+if ($resAtt) {
+    $rowAtt = $resAtt->fetch_assoc();
+    $absentCount = $rowAtt['absentCount'];
+} else {
+    $absentCount = 0;
+    error_log("Attendance query failed: " . $conn->error);
+}
 
 // 5. Sales Trend Chart for the Current Week
 $now = new DateTime();
@@ -64,9 +84,13 @@ $sqlWeekTrend = "SELECT DATE(order_date) AS orderDay, COALESCE(SUM(total_price),
 $resWeekTrend = $conn->query($sqlWeekTrend);
 $weekTrendLabels = [];
 $weekTrendData = [];
-while ($row = $resWeekTrend->fetch_assoc()) {
-    $weekTrendLabels[] = $row['orderDay'];
-    $weekTrendData[] = $row['dailySales'];
+if ($resWeekTrend) {
+    while ($row = $resWeekTrend->fetch_assoc()) {
+        $weekTrendLabels[] = $row['orderDay'];
+        $weekTrendData[] = $row['dailySales'];
+    }
+} else {
+    error_log("Week trend query failed: " . $conn->error);
 }
 $weekTrendLabelsJson = json_encode($weekTrendLabels);
 $weekTrendDataJson = json_encode($weekTrendData);
