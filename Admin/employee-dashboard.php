@@ -13,7 +13,7 @@ $userId = $_SESSION['UserId'];
 // Get the employee record for the logged in user (from employees table)
 $sqlEmp = "SELECT employee_id FROM employees WHERE user_id = '$userId' LIMIT 1";
 $resEmp = $conn->query($sqlEmp);
-$empRow = $resEmp->fetch_assoc();
+$empRow = $resEmp ? $resEmp->fetch_assoc() : null;
 $employeeId = $empRow['employee_id'] ?? 0;
 
 // Define today's date range
@@ -26,15 +26,17 @@ $sqlAtt = "SELECT * FROM attendance_records
            WHERE employee_id = '$employeeId' 
              AND attendance_date = '$todaysDate'";
 $resAtt = $conn->query($sqlAtt);
-$attendance = $resAtt->fetch_assoc();
+$attendance = $resAtt ? $resAtt->fetch_assoc() : null;
 
 // Compute working hours for today (if clock_out_time is available)
 $todayWorkedHours = 0;
 if ($attendance && !empty($attendance['clock_out_time'])) {
     $sqlDiff = "SELECT TIMESTAMPDIFF(MINUTE, '{$attendance['clock_in_time']}', '{$attendance['clock_out_time']}') AS minutes";
     $resDiff = $conn->query($sqlDiff);
-    $rowDiff = $resDiff->fetch_assoc();
-    $todayWorkedHours = round($rowDiff['minutes'] / 60, 2);
+    $rowDiff = $resDiff ? $resDiff->fetch_assoc() : null;
+    if ($rowDiff) {
+        $todayWorkedHours = round($rowDiff['minutes'] / 60, 2);
+    }
 }
 
 // Placeholder for tasks/orders assigned to the employee

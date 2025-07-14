@@ -58,17 +58,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Check user role to continue
                 if ($user['privilege'] === 'Manager') {
-                    // Return link to admin dashboard
-                    $_SESSION['privilege']=$user['privilege'];
+                    // Return link to manager dashboard
+                    $_SESSION['privilege'] = $user['privilege'];
                     $link = array("link" => "./manager-dashboard.php?link=$user[UserId]");
                 } elseif ($user['privilege'] === 'Boss') {
                     $_SESSION['login'] = true;
-                    // Return link to editor dashboard
-                    $_SESSION['privilege']=$user['privilege'];
+                    $_SESSION['privilege'] = $user['privilege'];
                     $link = array("link" => "./boss-dashboard.php?link=$user[UserId]");
-                }
-                else{
-                    $_SESSION['privilege']=$user['privilege'];
+                } elseif ($user['privilege'] === 'Stock') {
+                    $_SESSION['privilege'] = $user['privilege'];
+                    $link = array("link" => "./stock-dashboard.php?link=$user[UserId]");
+                } else {
+                    $_SESSION['privilege'] = $user['privilege'];
                     $link = array("link" => "./employee-dashboard.php?link=$user[UserId]");
                 }
                 echo json_encode($link);
