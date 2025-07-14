@@ -64,11 +64,15 @@ $resHistory = $conn->query($sqlHistory);
 $historyLabels = [];
 $historyHours = [];
 $historyAbsent = [];
-while ($row = $resHistory->fetch_assoc()) {
-    $historyLabels[] = $row['attDate'];
-    $hours = round($row['totalMinutes'] / 60, 2);
-    $historyHours[] = $hours;
-    $historyAbsent[] = (int)$row['absentCount'];
+if ($resHistory) {
+    while ($row = $resHistory->fetch_assoc()) {
+        $historyLabels[] = $row['attDate'];
+        $hours = round($row['totalMinutes'] / 60, 2);
+        $historyHours[] = $hours;
+        $historyAbsent[] = (int)$row['absentCount'];
+    }
+} else {
+    error_log('Error fetching history: ' . $conn->error);
 }
 
 $chartLabelsJson = json_encode($historyLabels);
