@@ -243,7 +243,7 @@ input[type="text"], input[type="password"] {
 
     <!-- black line below all -->
     <div class="banner-top">
-    <img src="../Client/img/LogoMaza.png" alt="pig" class="logo">
+    <img src="./assets/img/logo.png" alt="img" class="logo">
     </div>
     <!-- other one -->
     <div class="banner-bottom">
@@ -253,7 +253,7 @@ input[type="text"], input[type="password"] {
         <!-- Left Section with Logo -->
         
         <div class="logo-container">
-            <img src="../Client/img/main-back.jpg" alt="pig" class="img-side">
+            <img src="./assets/img/main-back.jpg" alt="img" class="img-side">
            
         </div>
 
