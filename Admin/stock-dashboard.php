@@ -3,7 +3,7 @@ session_start();
 require_once 'connection.php';
 require_once __DIR__ . '/../includes/auth.php';
 
-require_privilege(['Stock']);
+require_privilege(['Storekeeper']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

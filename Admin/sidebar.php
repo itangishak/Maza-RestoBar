@@ -7,7 +7,7 @@ if($_SESSION['privilege']=='Manager'){
 else if($_SESSION['privilege']=='Boss'){
     include_once './sidebarboss.php';
 }
-else if($_SESSION['privilege']=='Stock'){
+else if($_SESSION['privilege']=='Storekeeper'){
     include_once './sidebarstock.php';
 }
 else{
@@ -15,4 +15,4 @@ else{
 }
 
 ?>
-<!-- End Sidebar --> "
+<!-- End Sidebar -->
