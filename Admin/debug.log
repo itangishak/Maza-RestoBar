@@ -1538,3 +1538,71 @@ Stack trace:
 
 [15-Jul-2025 15:33:52 Europe/Berlin] Processing BUFFET sale
 [15-Jul-2025 15:33:52 Europe/Berlin] Sale processed and committed successfully
+[15-Jul-2025 16:42:28 Europe/Berlin] ============================================
+[15-Jul-2025 16:42:28 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-07-15 16:42:28
+[15-Jul-2025 16:42:28 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-07-15
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[15-Jul-2025 16:42:28 Europe/Berlin] Processing BUFFET sale
+[15-Jul-2025 16:42:28 Europe/Berlin] Sale processed and committed successfully
+[15-Jul-2025 16:53:48 Europe/Berlin] ============================================
+[15-Jul-2025 16:53:48 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-07-15 16:53:48
+[15-Jul-2025 16:53:48 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-07-15
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[15-Jul-2025 16:53:48 Europe/Berlin] Processing BUFFET sale
+[15-Jul-2025 16:53:48 Europe/Berlin] Sale processed and committed successfully
+[15-Jul-2025 16:55:02 Europe/Berlin] ============================================
+[15-Jul-2025 16:55:02 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-07-15 16:55:02
+[15-Jul-2025 16:55:02 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-07-15
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[15-Jul-2025 16:55:02 Europe/Berlin] Processing BUFFET sale
+[15-Jul-2025 16:55:03 Europe/Berlin] Sale processed and committed successfully
+[15-Jul-2025 16:56:51 Europe/Berlin] ============================================
+[15-Jul-2025 16:56:51 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-07-15 16:56:51
+[15-Jul-2025 16:56:51 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-07-15
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[15-Jul-2025 16:56:51 Europe/Berlin] Processing BUFFET sale
+[15-Jul-2025 16:56:51 Europe/Berlin] Sale processed and committed successfully
