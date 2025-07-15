@@ -34,8 +34,8 @@ require_privilege(['Boss','Manager','User']);
    /* Receipt styling for printing */
     #receiptContent {
       display: none; /* Hidden by default */
-      width: 20px; /* Width optimized for Epson TM-T20 */
-      margin: 0 auto; /* Changed from '0 0 0 10px' to '0 auto' for proper centering */
+      width: 72mm; /* Increased width to reduce right-side blank space */
+      margin: 0 auto; /* Center receipt content */
       padding: 0;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -813,8 +813,6 @@ $("#sellItemForm").on("submit", function(e){
     previewContent += `
       <h4>BUFFET</h4>
       <table class="w-100">
-        <tr><th>Date</th><td>${bDate}</td></tr>
-        <tr><th>Time Period</th><td>${timeLabel}</td></tr>
         <tr><th>Dishes Sold</th><td>${bDishes}</td></tr>
         <tr><th>Price per Dish</th><td>${bPrice} BIF</td></tr>
       </table>
@@ -1126,7 +1124,7 @@ $("#confirmSale").on("click", async function() {
           @page  { margin:0 }
           html,body {
             margin:0; padding:0;
-            width:58mm;           /* ← matches 58000 µm above */
+            width:72mm;           /* slightly wider to better use the paper */
             font-family:Arial, sans-serif;
           }
           #receiptContent { width:100%; text-align:center; }
@@ -1200,7 +1198,7 @@ $("#confirmSale").on("click", async function() {
                   html, body {
                     margin: 0;
                     padding: 0;
-                    width: 58mm; /* keep same width as single receipt */
+                    width: 72mm; /* match wider single receipt */
                     font-family: Arial, sans-serif;
                   }
                   .receipt-container {
@@ -1250,13 +1248,7 @@ $("#confirmSale").on("click", async function() {
                   <div class="receipt-section">
                     ${finalContent}
                   </div>
-                  
-                  <!-- DIVIDER -->
-                  <div class="divider">
-                   
-                  </div>
-                  
-      
+
                   <div class="receipt-section">
                     ${finalContent}
                   </div>
