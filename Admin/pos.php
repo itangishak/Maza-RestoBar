@@ -35,7 +35,7 @@ require_privilege(['Boss','Manager','User']);
     #receiptContent {
       display: none; /* Hidden by default */
       width: 200px; /* Reduced to fit with margin */
-      margin: 0 0 0 10px; /* Added 10px left margin */
+      margin: 0 auto; /* Changed from '0 0 0 10px' to '0 auto' for proper centering */
       padding: 0;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -1174,7 +1174,7 @@ $("#confirmSale").on("click", async function() {
                     width: 100%;
                   }
                   .receipt-section {
-                    margin: 0 0 0 10px;
+                    margin: 0 auto; /* Changed from '0 0 0 10px' to '0 auto' for proper centering */
                     padding: 0 0 20px 0;
                     font-family: Arial, sans-serif;
                     text-align: center;
