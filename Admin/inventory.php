@@ -62,9 +62,9 @@ if (!isset($_SESSION['UserId'])) {
             <div class="card-body">
                 <!-- Category Filter -->
                 <div class="category-filter">
-                    <label for="categoryFilter" class="form-label">Filter by Category:</label>
+                    <label for="categoryFilter" class="form-label" data-key="inventory.filterCategory">Filter by Category:</label>
                     <select id="categoryFilter" class="form-select" style="width: auto; display: inline-block;">
-                        <option value="">All Categories</option>
+                        <option value="" data-key="inventory.allCategories">All Categories</option>
                         <!-- Populated dynamically -->
                     </select>
                 </div>
@@ -254,6 +254,13 @@ if (!isset($_SESSION['UserId'])) {
 
     <script>
     $(document).ready(function () {
+        const systemLang = navigator.language || navigator.userLanguage;
+        let defaultLang = 'en';
+        if (systemLang && systemLang.startsWith('fr')) {
+            defaultLang = 'fr';
+        }
+        let currentLang = localStorage.getItem('userLang') || defaultLang;
+
         // Initialize DataTable
         let table = $('#inventoryTable').DataTable({
             ajax: {
@@ -293,12 +300,17 @@ if (!isset($_SESSION['UserId'])) {
                 { extend: 'copy', text: getTranslation('inventory.copy'), exportOptions: { columns: ':not(:last-child)' } },
                 { extend: 'pdf', text: getTranslation('inventory.exportPdf'), exportOptions: { columns: ':not(:last-child)' } },
                 { extend: 'print', text: getTranslation('inventory.print'), exportOptions: { columns: ':not(:last-child)' } }
-            ]
+            ],
+            language: {
+                url: currentLang === 'fr'
+                    ? 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/fr-FR.json'
+                    : 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/en-GB.json'
+            }
         });
 
         // Populate Category Filter Dropdown
         $.get('fetch_categories.php', function (data) {
-            let options = '<option value="">All Categories</option>';
+            let options = '<option value="" data-key="inventory.allCategories">All Categories</option>';
             if (data.status === 'success' && Array.isArray(data.data)) {
                 data.data.forEach(category => {
                     options += `<option value="${category.category_id}">${category.category_name}</option>`;
@@ -349,7 +361,7 @@ if (!isset($_SESSION['UserId'])) {
                     reloadDropdowns();
                     // Refresh category filter
                     $.get('fetch_categories.php', function (data) {
-                        let options = '<option value="">All Categories</option>';
+                        let options = '<option value="" data-key="inventory.allCategories">All Categories</option>';
                         if (data.status === 'success' && Array.isArray(data.data)) {
                             data.data.forEach(category => {
                                 options += `<option value="${category.category_id}">${category.category_name}</option>`;
@@ -479,7 +491,6 @@ if (!isset($_SESSION['UserId'])) {
         }
 
         // Translation Logic
-        let currentLang = 'en';
         loadTranslations(currentLang);
 
         function loadTranslations(lang) {
@@ -492,6 +503,7 @@ if (!isset($_SESSION['UserId'])) {
                 })
                 .then(translations => {
                     localStorage.setItem('translations', JSON.stringify(translations));
+                    localStorage.setItem('userLang', lang);
                     translatePage(translations);
                 })
                 .catch(error => {
