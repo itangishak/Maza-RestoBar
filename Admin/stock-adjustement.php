@@ -612,10 +612,10 @@ function loadDataTablesScripts() {
   console.log('jQuery is available, loading DataTables scripts...');
   
   const scripts = [
-    'assets/vendor/datatables/jquery.dataTables.min.js',
-    'assets/vendor/datatables/dataTables.bootstrap5.min.js',
-    'assets/vendor/datatables/dataTables.buttons.min.js',
-    'assets/vendor/datatables/buttons.print.min.js'
+    'assets/vendor/DataTables/jquery.dataTables.min.js',
+    'assets/vendor/DataTables/dataTables.bootstrap5.min.js',
+    'assets/vendor/DataTables/dataTables.buttons.min.js',
+    'assets/vendor/DataTables/buttons.print.min.js'
   ];
   
   function loadScriptSequentially(index) {

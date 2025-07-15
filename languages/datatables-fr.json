@@ -1,0 +1,10 @@
+{
+  "search": "Recherche:",
+  "lengthMenu": "Afficher _MENU_ entrées",
+  "info": "Affichage de _START_ à _END_ de _TOTAL_ entrées",
+  "paginate": {
+    "next": "Suivant",
+    "previous": "Précédent"
+  },
+  "zeroRecords": "Aucun résultat trouvé"
+}

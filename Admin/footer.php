@@ -40,9 +40,9 @@
       loadScript("assets/vendor/php-email-form/validate.js");
       loadScript("assets/js/sweetalert2.min.js");
       loadScript("assets/js/translation.js");
-      loadScript("assets/vendor/datatables/jquery.dataTables.min.js");
-      loadScript("assets/vendor/datatables/dataTables.buttons.min.js");
-      loadScript("assets/vendor/datatables/buttons.print.min.js");
+      loadScript("assets/vendor/DataTables/jquery.dataTables.min.js");
+      loadScript("assets/vendor/DataTables/dataTables.buttons.min.js");
+      loadScript("assets/vendor/DataTables/buttons.print.min.js");
     }
   })();
 </script>
@@ -63,9 +63,9 @@
 <script src="assets/js/translation.js"></script>
 
 
-<script src="assets/vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="assets/vendor/datatables/dataTables.buttons.min.js"></script>
-<script src="assets/vendor/datatables/buttons.print.min.js"></script>
+<script src="assets/vendor/DataTables/jquery.dataTables.min.js"></script>
+<script src="assets/vendor/DataTables/dataTables.buttons.min.js"></script>
+<script src="assets/vendor/DataTables/buttons.print.min.js"></script>
 <script src="assets/vendor/bootstrap/5.3.0/bootstrap.bundle.min.js"></script>
 -->
     
