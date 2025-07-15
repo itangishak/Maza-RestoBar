@@ -1113,208 +1113,173 @@ $("#confirmSale").on("click", async function() {
 
     // Get final content after logo setup
     const finalContent = $("#receiptContent").html();
+// Print HTML
+    const html = `
+      <html>
+      <head>
+        <style>
+          @page  { margin:0 }
+          html,body {
+            margin:0; padding:0;
+            width:58mm;           /* ← matches 58000 µm above */
+            font-family:Arial, sans-serif;
+          }
+          #receiptContent { width:100%; text-align:center; }
+          #receiptContent img,
+          #receiptContent h2,
+          #receiptContent p,
+          #receiptContent hr {
+            margin: 0;
+            padding: 0;
+          }
+          #receiptContent img {
+            width: 100px;
+            margin: 0 auto 0px auto;
+            display: block;
+          }
+          #receiptContent h2 {
+            font-size: 16px;
+            font-weight: bold;
+          }
+          #receiptContent p {
+            margin: 5px 0;
+            font-size: 12px;
+          }
+          #receiptContent hr {
+            border: none;
+            border-top: 1px dashed #000;
+            margin: 8px 0;
+            width: 100%;
+          }
+          #receiptContent table {
+            width: 100%;
+            margin: 5px 0;
+            border-collapse: collapse;
+            font-size: 11px;
+          }
+          #receiptContent th,
+          #receiptContent td {
+            border: 1px solid #000;
+            padding: 3px;
+            text-align: center;
+          }
+          #receiptContent .text-end {
+            text-align: right;
+          }
+          h4 {
+            margin: 10px 0 5px 0;
+            font-size: 14px;
+            text-decoration: underline;
+          }
+        </style>
+      </head>
+      <body>
+        <div id="receiptContent">${finalContent}</div>
+      </body>
+      </html>
+    `;
 
-   // Print HTML
-const html = `
-  <html>
-  <head>
-    <style>
-      @page  { margin:0 }
-      html,body {
-        margin:0; padding:0;
-        width:58mm;
-        font-family:Arial, sans-serif;
-      }
-      #receiptContent { width:100%; text-align:center; }
-      #receiptContent img,
-      #receiptContent h2,
-      #receiptContent p,
-      #receiptContent hr {
-        margin: 0;
-        padding: 0;
-      }
-      #receiptContent img {
-        width: 100px;
-        margin: 0 auto 0px auto;
-        display: block;
-      }
-      #receiptContent h2 {
-        font-size: 16px;
-        font-weight: bold;
-      }
-      #receiptContent p {
-        margin: 5px 0;
-        font-size: 12px;
-      }
-      #receiptContent hr {
-        border: none;
-        border-top: 1px dashed #000;
-        margin: 8px 0;
-        width: 100%;
-      }
-      #receiptContent table {
-        width: 100%;
-        margin: 5px 0;
-        border-collapse: collapse;
-        font-size: 11px;
-      }
-      #receiptContent th,
-      #receiptContent td {
-        border: 1px solid #000;
-        padding: 3px;
-        text-align: center;
-      }
-      #receiptContent .text-end {
-        text-align: right;
-      }
-      h4 {
-        margin: 10px 0 5px 0;
-        font-size: 14px;
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="receiptContent">${finalContent}</div>
-  </body>
-  </html>
-`;
-
-// Print with delay to ensure rendering
-setTimeout(async () => {
-  try {
-    // Check if we need two sections (client and audit)
-    const printTwoSections = $("#printTwoSections").prop("checked");
-    
-    if (printTwoSections) {
-      // Create two-section receipt with divider - using same styles as single receipt
-      const twoSectionHtml = `
-        <html>
-        <head>
-          <style>
-            @page { margin: 0; }
-            html,body {
-              margin: 0; 
-              padding: 0;
-              width: 58mm;
-              font-family: Arial, sans-serif;
-            }
-            .receipt-section {
-              width: 100%;
-              text-align: center;
-            }
-            .receipt-section h3 {
-              margin: 10px 0;
-              font-size: 14px;
-              font-weight: bold;
-              text-align: center;
-            }
-            .divider {
-              width: 100%;
-              border-top: 2px dashed #000;
-              margin: 15px 0;
-              text-align: center;
-              position: relative;
-            }
-            .divider-text {
-              position: absolute;
-              top: -10px;
-              left: 50%;
-              transform: translateX(-50%);
-              background: white;
-              padding: 0 10px;
-              font-weight: bold;
-              font-size: 12px;
-            }
-            /* Same styles as single receipt */
-            .receipt-section img,
-            .receipt-section h2,
-            .receipt-section p,
-            .receipt-section hr {
-              margin: 0;
-              padding: 0;
-            }
-            .receipt-section img {
-              width: 100px;
-              margin: 0 auto 0px auto;
-              display: block;
-            }
-            .receipt-section h2 {
-              font-size: 16px;
-              font-weight: bold;
-            }
-            .receipt-section p {
-              margin: 5px 0;
-              font-size: 12px;
-            }
-            .receipt-section hr {
-              border: none;
-              border-top: 1px dashed #000;
-              margin: 8px 0;
-              width: 100%;
-            }
-            .receipt-section table {
-              width: 100%;
-              margin: 5px 0;
-              border-collapse: collapse;
-              font-size: 11px;
-            }
-            .receipt-section th,
-            .receipt-section td {
-              border: 1px solid #000;
-              padding: 3px;
-              text-align: center;
-            }
-            .receipt-section .text-end {
-              text-align: right;
-            }
-            .receipt-section h4 {
-              margin: 10px 0 5px 0;
-              font-size: 14px;
-              text-decoration: underline;
-            }
-          </style>
-        </head>
-        <body>
-          <!-- CLIENT COPY -->
-          <div class="receipt-section">
-            <h3>CLIENT COPY</h3>
-            ${finalContent}
-          </div>
+    // Print with delay to ensure rendering
+    setTimeout(async () => {
+      try {
+        // Check if we need two sections (client and audit)
+        const printTwoSections = $("#printTwoSections").prop("checked");
+        
+        if (printTwoSections) {
+          // Create two-section receipt with divider
+          const twoSectionHtml = `
+            <html>
+              <head>
+                <style>
+                  @page { margin: 0; }
+                  body { margin: 0; padding: 0; }
+                  .receipt-container { 
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                  }
+                  .receipt-section {
+                    margin: 0 auto; /* Changed from '0 0 0 10px' to '0 auto' for proper centering */
+                    padding: 0 0 20px 0;
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    font-size: 12px;
+                    line-height: 1.2;
+                  }
+                  .divider {
+                    width: 100%;
+                    border-top: 2px dashed #000;
+                    margin: 15px 0;
+                    text-align: center;
+                    position: relative;
+                  }
+                  .divider-text {
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: white;
+                    padding: 0 10px;
+                    font-weight: bold;
+                  }
+                  /* All other receipt styles */
+                  img { width: 100px; margin: 0 auto 0px auto; display: block; }
+                  h2 { margin: 0; font-size: 16px; font-weight: bold; }
+                  h4 { margin: 10px 0 5px 0; font-size: 14px; text-decoration: underline; }
+                  p { margin: 5px 0; font-size: 12px; }
+                  hr { border: none; border-top: 1px dashed #000; margin: 8px 0; width: 100%; }
+                  table { width: 100%; margin: 5px 0; border-collapse: collapse; font-size: 11px; }
+                  th, td { border: 1px solid #000; padding: 3px; text-align: center; }
+                  .text-end { text-align: right; }
+                </style>
+              </head>
+              <body>
+                <div class="receipt-container">
+                  <!-- CLIENT COPY -->
+                  <div class="receipt-section">
+                    <h3>CLIENT COPY</h3>
+                    ${finalContent}
+                  </div>
+                  
+                  <!-- DIVIDER -->
+                  <div class="divider">
+                    <div class="divider-text">✂ CUT HERE ✂</div>
+                  </div>
+                  
+                  <!-- AUDIT COPY -->
+                  <div class="receipt-section">
+                    <h3>AUDIT COPY</h3>
+                    ${finalContent}
+                  </div>
+                </div>
+              </body>
+            </html>
+          `;
           
-          <!-- DIVIDER -->
-          <div class="divider">
-            <div class="divider-text">✂ CUT HERE ✂</div>
-          </div>
-          
-          <!-- AUDIT COPY -->
-          <div class="receipt-section">
-            <h3>AUDIT COPY</h3>
-            ${finalContent}
-          </div>
-        </body>
-        </html>
-      `;
-      
-      await window.printer.printHTML(twoSectionHtml);
-    } else {
-      // Print single receipt as before
-      await window.printer.printHTML(html);
-    }
-    
-    console.log("Print succeeded");
-    Swal.fire({
-      title: "Success",
-      text: "Sale confirmed and receipt printed successfully.",
-      icon: "success"
-    }).then(() => {
-      window.location.reload();
-    });
-  } catch (printErr) {
-    console.error("Print failed:", printErr);
-    Swal.fire("Error", "Sale confirmed but failed to print receipt.", "error");
+          await window.printer.printHTML(twoSectionHtml);
+        } else {
+          // Print single receipt as before
+          await window.printer.printHTML(html);
+        }
+        
+        console.log("Print succeeded");
+        Swal.fire({
+          title: "Success",
+          text: "Sale confirmed and receipt printed successfully.",
+          icon: "success"
+        }).then(() => {
+          window.location.reload();
+        });
+      } catch (printErr) {
+        console.error("Print failed:", printErr);
+        Swal.fire("Error", "Sale confirmed but failed to print receipt.", "error");
+      }
+    }, 100); // 100ms delay
+  } catch (err) {
+    console.error("Error:", err);
+    Swal.fire("Error", "Failed to process sale.", "error");
   }
-}, 100);
+});
 // Add search inputs to each table
 $(document).ready(function() {
   // Function to filter table rows
