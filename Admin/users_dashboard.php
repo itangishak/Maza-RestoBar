@@ -96,6 +96,7 @@ if (!isset($_SESSION['UserId'])) {
                             <option value="Admin" data-key="users.privilegeAdmin">Admin</option>
                             <option value="User" data-key="users.privilegeUser">User</option>
                             <option value="Manager" data-key="users.privilegeManager">Manager</option>
+                            <option value="Storekeeper" data-key="users.privilegeStorekeeper">Storekeeper</option>
                         </select>
                     </div>
                     <div class="modal-footer">
