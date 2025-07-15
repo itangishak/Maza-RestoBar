@@ -83,11 +83,5 @@ function initializeLoginForm() {
     });
 }
 
-// Initialize when jQuery is ready
-if (typeof jQuery !== 'undefined') {
-    $(document).ready(initializeLoginForm);
-} else {
-    document.addEventListener('jQueryReady', function() {
-        $(document).ready(initializeLoginForm);
-    });
-}
+// Initialize after DOM is ready
+$(document).ready(initializeLoginForm);

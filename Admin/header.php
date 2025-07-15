@@ -5,8 +5,8 @@
 <meta content="" name="description">
 <meta content="" name="keywords">
 
-<!-- Critical: Include jQuery initialization script first -->
-<script src="assets/js/init.js"></script>
+<!-- jQuery -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
 
 <!-- Favicons -->
 <link href="../Client/img/LogoMaza.png" rel="icon">
@@ -52,90 +52,16 @@
 <!-- Local jsPDF -->
 <script src="assets/js/jspdf.umd.min.js"></script>
 
-<!-- IMPORTANT: Load DataTables and its dependencies in the correct order -->
+<!-- DataTables -->
+<script src="assets/vendor/DataTables/jquery.dataTables.min.js"></script>
+<script src="assets/vendor/DataTables/dataTables.bootstrap5.min.js"></script>
+<script src="assets/vendor/DataTables/dataTables.buttons.min.js"></script>
+<script src="assets/vendor/DataTables/buttons.print.min.js"></script>
 <script>
-  // Function to load scripts in sequence
-  function loadScripts() {
-    const scripts = [
-      'assets/vendor/DataTables/jquery.dataTables.min.js',
-      'assets/vendor/DataTables/dataTables.bootstrap5.min.js',
-      'assets/vendor/DataTables/dataTables.buttons.min.js',
-      'assets/vendor/DataTables/buttons.print.min.js'
-    ];
-
-    function loadScript(src) {
-      return new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = src;
-        script.async = false; // Ensure synchronous loading
-        script.onload = () => {
-          console.log(`Loaded: ${src}`);
-          resolve();
-        };
-        script.onerror = (error) => {
-          console.error(`Failed to load: ${src}`, error);
-          reject(error);
-        };
-        document.head.appendChild(script);
-      });
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof window.initializeDataTables === 'function') {
+      window.initializeDataTables();
     }
-
-    // Load scripts sequentially
-    scripts.reduce((promise, script) => {
-      return promise.then(() => loadScript(script));
-    }, Promise.resolve())
-    .then(() => {
-      console.log('All DataTables scripts loaded successfully');
-      // Initialize DataTables after all scripts are loaded
-      if (typeof window.initializeDataTables === 'function') {
-        window.initializeDataTables();
-      }
-    })
-    .catch(error => {
-      console.error('Error loading DataTables scripts:', error);
-    });
-  }
-
-  // Load scripts when jQuery is ready
-  if (typeof jQuery !== 'undefined') {
-    console.log('jQuery is available, loading DataTables scripts...');
-    loadScripts();
-  } else {
-    console.log('Waiting for jQuery to be available...');
-    document.addEventListener('jQueryReady', () => {
-      console.log('jQuery is now available, loading DataTables scripts...');
-      loadScripts();
-    });
-  }
-
-  function loadDataTablesScripts() {
-    console.log('jQuery is available, loading DataTables scripts...');
-    
-    const scripts = [
-      'assets/vendor/DataTables/jquery.dataTables.min.js',
-      'assets/vendor/DataTables/dataTables.bootstrap5.min.js',
-      'assets/vendor/DataTables/dataTables.buttons.min.js',
-      'assets/vendor/DataTables/buttons.print.min.js'
-    ];
-    
-    function loadScriptSequentially(index) {
-      if (index >= scripts.length) {
-        console.log('All DataTables scripts loaded successfully');
-        return;
-      }
-      
-      const script = document.createElement('script');
-      script.src = scripts[index];
-      script.onload = function() {
-        console.log('Loaded:', scripts[index]);
-        // Load the next script only after this one is loaded
-        loadScriptSequentially(index + 1);
-      };
-      document.body.appendChild(script);
-    }
-    
-    // Start loading scripts sequentially
-    loadScriptSequentially(0);
-  }
+  });
 </script>
    
