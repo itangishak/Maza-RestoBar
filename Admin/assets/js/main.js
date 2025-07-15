@@ -255,8 +255,83 @@ function switchLanguage(lang) {
 })();
 
 
-var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
-var dropdownList = dropdownElementList.map(function (dropdownToggle) {
-  return new bootstrap.Dropdown(dropdownToggle);
+document.addEventListener('DOMContentLoaded', function() {
+    // Try to initialize dropdowns with Bootstrap first
+    try {
+        if (typeof bootstrap !== 'undefined') {
+            var dropdowns = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'));
+            dropdowns.forEach(function(dropdownToggle) {
+                new bootstrap.Dropdown(dropdownToggle);
+            });
+        } else {
+            // Fallback to manual initialization if Bootstrap is not available
+            initializeNavbarDropdowns();
+        }
+    } catch (error) {
+        console.error('Bootstrap dropdown initialization failed:', error);
+        // Fallback to manual initialization
+        initializeNavbarDropdowns();
+    }
 });
+
+// Fix for navbar dropdown functionality - works offline
+function initializeNavbarDropdowns() {
+    // Handle dropdown toggles manually if Bootstrap JS fails
+    const dropdownToggleBtns = document.querySelectorAll('[data-bs-toggle="dropdown"], [data-toggle="dropdown"]');
+    
+    dropdownToggleBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const dropdown = this.nextElementSibling;
+            if (dropdown && dropdown.classList.contains('dropdown-menu')) {
+                // Close other dropdowns first
+                document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                    if (menu !== dropdown) {
+                        menu.classList.remove('show');
+                        menu.parentElement.classList.remove('show');
+                    }
+                });
+                
+                // Toggle current dropdown
+                dropdown.classList.toggle('show');
+                this.parentElement.classList.toggle('show');
+                
+                // Handle aria attributes
+                const expanded = dropdown.classList.contains('show');
+                this.setAttribute('aria-expanded', expanded);
+            }
+        });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                menu.classList.remove('show');
+                menu.parentElement.classList.remove('show');
+                const toggle = menu.parentElement.querySelector('[data-bs-toggle="dropdown"], [data-toggle="dropdown"]');
+                if (toggle) {
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    });
+    
+    // Handle keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                menu.classList.remove('show');
+                menu.parentElement.classList.remove('show');
+                const toggle = menu.parentElement.querySelector('[data-bs-toggle="dropdown"], [data-toggle="dropdown"]');
+                if (toggle) {
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.focus();
+                }
+            });
+        }
+    });
+}
 
