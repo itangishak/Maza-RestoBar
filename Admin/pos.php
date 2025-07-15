@@ -1459,6 +1459,34 @@ window.toggleSections = function() {
   }
 };
 
+// Initialize the document ready function with all section setup
+
+// Function to load accompaniment options
+function loadAccompanimentOptions() {
+  fetch('fetch_accompaniments.php')
+    .then(response => response.json())
+    .then(data => {
+      if (data.error) {
+        console.error('Error loading accompaniments:', data.error);
+        return;
+      }
+      
+      // Store accompaniment options globally
+      accompanimentOptions = '';
+      data.forEach(item => {
+        accompanimentOptions += `<option value="${item.accompaniment_id}" data-price="${item.accompaniment_price}">${item.accompaniment_name} (${item.accompaniment_price} BIF)</option>`;
+      });
+      
+      // Update all existing accompaniment selects
+      $('.accompaniment-select').each(function() {
+        const currentValue = $(this).val();
+        $(this).html(`<option value="" data-key="report.selectAccompaniment">Select Accompaniment</option>${accompanimentOptions}`);
+        $(this).val(currentValue);
+      });
+    })
+    .catch(error => console.error('Failed to load accompaniments:', error));
+}
+
 // Function to update buffet price based on current time and buffet_preferences
 function updateBuffetPrice() {
   const buffetPriceInput = $('#buffetPrice');
@@ -1594,6 +1622,40 @@ function loadBuffetCounts() {
   window.buffetCountMorning = 0;
   window.buffetCountNoon = 0;
   window.buffetCountEvening = 0;
+}
+
+// Function to load accompaniment options from server
+function loadAccompanimentOptions() {
+  // Fetch accompaniment data from server
+  fetch('get_accompaniments.php')
+    .then(response => response.json())
+    .then(data => {
+      if (data.error) {
+        console.error('Error loading accompaniments:', data.error);
+        return;
+      }
+      
+      // Clear the options string
+      accompanimentOptions = '';
+      
+      // Generate options HTML for accompaniments
+      data.forEach(item => {
+        accompanimentOptions += `<option value="${item.id}" data-price="${item.price}">${item.name} (${item.price.toLocaleString()} BIF)</option>`;
+      });
+      
+      // Add any existing rows if the section is already visible
+      if ($('#allow-accompaniments').is(':checked') && $('#accompanimentTableBody tr').length === 0) {
+        addAccompanimentRow();
+      }
+    })
+    .catch(err => console.error('Error fetching accompaniments:', err));
+}
+
+// Function to update buffet counts after a sale
+function updateBuffetCounts() {
+  // The actual update happens on the server via the AJAX request to sell_item_action.php
+  // This function just refreshes the displayed counts
+  loadBuffetCounts();
 }
 
 // Initialize the buffet date picker to today's date and let the server determine the time period
@@ -1797,16 +1859,9 @@ function loadAccompanimentOptions() {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      return response.text();
+      return response.json();
     })
-    .then(text => {
-      let data;
-      try {
-        data = JSON.parse(text);
-      } catch (err) {
-        console.error('Failed to parse accompaniment JSON:', err);
-        return;
-      }
+    .then(data => {
       console.log('Accompaniment options loaded:', data);
       if (data.status === 'success' && Array.isArray(data.accompaniments)) {
         // Store the accompaniments globally for reference
