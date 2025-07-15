@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['login'] = true;
                     $_SESSION['privilege'] = $user['privilege'];
                     $link = array("link" => "./boss-dashboard.php?link=$user[UserId]");
-                } elseif ($user['privilege'] === 'Stock') {
+                } elseif ($user['privilege'] === 'Storekeeper') {
                     $_SESSION['privilege'] = $user['privilege'];
                     $link = array("link" => "./stock-dashboard.php?link=$user[UserId]");
                 } else {

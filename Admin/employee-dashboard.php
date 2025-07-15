@@ -83,11 +83,17 @@ $chartHoursJson  = json_encode($historyHours);
 <head>
   <meta charset="UTF-8">
   <!-- Title translated -->
-  <title data-key="dashboard.employeeDashboard"></title>
+  <title data-key="dashboard.employeeDashboard">Employee Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Load Chart.js from CDN first -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
   <?php include_once 'header.php'; ?>
+  
   <style>
     .card { margin-bottom: 20px; }
     .summary-row {
@@ -127,57 +133,57 @@ $chartHoursJson  = json_encode($historyHours);
   <div class="container main-container">
     <div class="card shadow">
       <div class="card-header">
-        <h1 data-key="dashboard.employeeDashboard"></h1>
+        <h1 data-key="dashboard.employeeDashboard">Employee Dashboard</h1>
       </div>
       <div class="card-body">
         <!-- Summary Cards -->
         <div class="summary-row">
           <div class="summary-card">
-            <h4 data-key="dashboard.todaysAttendance"></h4>
+            <h4 data-key="dashboard.todaysAttendance">Today's Attendance</h4>
             <?php if ($attendance): ?>
-              <p><span data-key="dashboard.status"></span> <?php echo htmlspecialchars($attendance['status']); ?></p>
-              <p><span data-key="dashboard.clockIn"></span> <?php echo htmlspecialchars($attendance['clock_in_time']); ?></p>
-              <p><span data-key="dashboard.clockOut"></span> <?php echo htmlspecialchars($attendance['clock_out_time']); ?></p>
-              <p><span data-key="dashboard.worked"></span> <?php echo number_format($todayWorkedHours,2); ?> hrs</p>
+              <p><span data-key="dashboard.status">Status:</span> <?php echo htmlspecialchars($attendance['status']); ?></p>
+              <p><span data-key="dashboard.clockIn">Clock In:</span> <?php echo htmlspecialchars($attendance['clock_in_time']); ?></p>
+              <p><span data-key="dashboard.clockOut">Clock Out:</span> <?php echo htmlspecialchars($attendance['clock_out_time']); ?></p>
+              <p><span data-key="dashboard.worked">Worked:</span> <?php echo number_format($todayWorkedHours,2); ?> hrs</p>
             <?php else: ?>
-              <p data-key="dashboard.noAttendanceRecorded"></p>
+              <p data-key="dashboard.noAttendanceRecorded">No attendance recorded for today</p>
             <?php endif; ?>
           </div>
           <div class="summary-card">
-            <h4 data-key="dashboard.myTasks"></h4>
+            <h4 data-key="dashboard.myTasks">My Tasks</h4>
             <p>
-              <span data-key="dashboard.youHaveTasks"></span> <?php echo number_format($myTasks, 0); ?> <span data-key="dashboard.tasksAssigned"></span>
+              <span data-key="dashboard.youHaveTasks">You have</span> <?php echo number_format($myTasks, 0); ?> <span data-key="dashboard.tasksAssigned">tasks assigned</span>
             </p>
-            <a href="employee-tasks.php" class="btn btn-success btn-sm" data-key="dashboard.viewTasks"></a>
+            <a href="employee-tasks.php" class="btn btn-success btn-sm" data-key="dashboard.viewTasks">View Tasks</a>
           </div>
         </div>
         
         <!-- Hidden element for chart title -->
-        <span id="chartTitle" data-key="dashboard.workingHoursChartTitle" style="display:none;"></span>
+        <span id="chartTitle" data-key="dashboard.workingHoursChartTitle" style="display:none;">Working Hours Chart</span>
         
         <!-- Attendance History Chart (Past 7 Days) -->
         <div class="card mb-4">
           <div class="card-header">
-            <h4 data-key="dashboard.attendanceHistory"></h4>
+            <h4 data-key="dashboard.attendanceHistory">Attendance History (Last 7 Days)</h4>
           </div>
           <div class="card-body">
-            <canvas id="attendanceChart"></canvas>
+            <canvas id="attendanceChart" width="400" height="200"></canvas>
           </div>
         </div>
         
         <!-- Detailed Attendance History Table -->
         <div class="card">
           <div class="card-header">
-            <h4 data-key="dashboard.detailedAttendanceHistory"></h4>
+            <h4 data-key="dashboard.detailedAttendanceHistory">Detailed Attendance History</h4>
           </div>
           <div class="card-body">
             <?php if (count($historyLabels) > 0): ?>
               <table class="table table-bordered">
                 <thead class="table-light">
                   <tr>
-                    <th data-key="dashboard.date"></th>
-                    <th data-key="dashboard.workingHours"></th>
-                    <th data-key="dashboard.absentCount"></th>
+                    <th data-key="dashboard.date">Date</th>
+                    <th data-key="dashboard.workingHours">Working Hours</th>
+                    <th data-key="dashboard.absentCount">Absent Count</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -191,7 +197,7 @@ $chartHoursJson  = json_encode($historyHours);
                 </tbody>
               </table>
             <?php else: ?>
-              <p class="text-muted" data-key="dashboard.noAttendanceData"></p>
+              <p class="text-muted" data-key="dashboard.noAttendanceData">No attendance data available</p>
             <?php endif; ?>
           </div>
         </div>
@@ -199,9 +205,8 @@ $chartHoursJson  = json_encode($historyHours);
     </div>
   </div>
   
-  <?php include_once './footer.php'; ?>
-  
- 
+  <!-- Bootstrap JS (needed for dropdowns) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
     // Sidebar toggling logic
@@ -209,6 +214,7 @@ $chartHoursJson  = json_encode($historyHours);
     const sidebar = document.querySelector('.sidebar');
     const mainContainer = document.querySelector('.main-container');
     const card = document.querySelector('.card');
+    
     if (sidebar && card) {
       if (!sidebar.classList.contains('collapsed')) {
         card.style.width = '87%';
@@ -218,6 +224,7 @@ $chartHoursJson  = json_encode($historyHours);
         card.style.marginLeft = '5%';
       }
     }
+    
     if (toggleSidebarBtn && sidebar && mainContainer && card) {
       toggleSidebarBtn.addEventListener('click', function () {
         sidebar.classList.toggle('collapsed');
@@ -233,7 +240,7 @@ $chartHoursJson  = json_encode($historyHours);
     }
   </script>
   
-  <!-- Translation Script (FINAL with button fix) -->
+  <!-- Translation Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const systemLang = navigator.language || navigator.userLanguage;
@@ -254,7 +261,6 @@ $chartHoursJson  = json_encode($historyHours);
           return response.text();
         })
         .then(text => {
-          // Assuming your language file is valid JSON
           const translations = JSON.parse(text);
           localStorage.setItem('translations', JSON.stringify(translations));
           translatePage(translations);
@@ -297,44 +303,63 @@ $chartHoursJson  = json_encode($historyHours);
   
   <!-- Attendance History Chart -->
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize the chart after DOM is loaded
+      initAttendanceChart();
+    });
+
     function initAttendanceChart() {
-      const ctx = document.getElementById('attendanceChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: <?php echo $chartLabelsJson; ?>,
-          datasets: [{
-            label: 'Working Hours',
-            data: <?php echo $chartHoursJson; ?>,
-            borderColor: 'rgba(75, 192, 192, 1)',
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            fill: false,
-            tension: 0.2
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: { y: { beginAtZero: true } },
-          plugins: {
-            legend: { position: 'top' },
-            title: {
-              display: true,
-              text: document.querySelector('[data-key="dashboard.workingHoursChartTitle"]')?.textContent
+      const ctx = document.getElementById('attendanceChart');
+      if (!ctx) {
+        console.error('Canvas element not found');
+        return;
+      }
+
+      // Check if Chart.js is loaded
+      if (typeof Chart === 'undefined') {
+        console.error('Chart.js is not loaded');
+        return;
+      }
+
+      try {
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: <?php echo $chartLabelsJson; ?>,
+            datasets: [{
+              label: 'Working Hours',
+              data: <?php echo $chartHoursJson; ?>,
+              borderColor: 'rgba(75, 192, 192, 1)',
+              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+              fill: false,
+              tension: 0.2
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: { 
+              y: { 
+                beginAtZero: true 
+              } 
+            },
+            plugins: {
+              legend: { 
+                position: 'top' 
+              },
+              title: {
+                display: true,
+                text: 'Working Hours Over Time'
+              }
             }
           }
-        }
-      });
-    }
-
-    function waitForChartJs() {
-      if (window.Chart) {
-        initAttendanceChart();
-      } else {
-        setTimeout(waitForChartJs, 50);
+        });
+      } catch (error) {
+        console.error('Error initializing chart:', error);
       }
     }
-
-    waitForChartJs();
   </script>
+  
+  <?php include_once './footer.php'; ?>
 </body>
 </html>
