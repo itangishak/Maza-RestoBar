@@ -64,6 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  
+  // Add this code to initialize Bootstrap dropdowns
+  var dropdownElementList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'));
+  var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+    return new bootstrap.Dropdown(dropdownToggleEl);
+  });
 });
 </script>
 
