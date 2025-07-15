@@ -1719,3 +1719,60 @@ Stack trace:
 
 [15-Jul-2025 19:07:37 Europe/Berlin] Processing BUFFET sale
 [15-Jul-2025 19:07:37 Europe/Berlin] Sale processed and committed successfully
+[15-Jul-2025 19:11:58 Europe/Berlin] ============================================
+[15-Jul-2025 19:11:58 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-07-15 19:11:58
+[15-Jul-2025 19:11:58 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => menu
+    [include_menu] => 1
+    [include_drink] => 1
+    [include_buffet] => 1
+    [menu_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 12
+                    [quantity] => 1
+                    [total_price] => 5000.00
+                )
+
+        )
+
+    [drink_items] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 25
+                    [quantity] => 1
+                    [total_price] => 3000.00
+                )
+
+        )
+
+    [buffet_date] => 2025-07-15
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [allow_accompaniments] => 1
+    [accompaniment_id] => Array
+        (
+            [0] => 14
+        )
+
+    [accompaniment_qty] => Array
+        (
+            [0] => 1
+        )
+
+    [accompaniment_price] => Array
+        (
+            [0] => 8000.00
+        )
+
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[15-Jul-2025 19:11:58 Europe/Berlin] Processing MENU sale
+[15-Jul-2025 19:11:58 Europe/Berlin] Sale processed and committed successfully
