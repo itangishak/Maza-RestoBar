@@ -254,3 +254,9 @@ function switchLanguage(lang) {
 
 })();
 
+
+var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+var dropdownList = dropdownElementList.map(function (dropdownToggle) {
+  return new bootstrap.Dropdown(dropdownToggle);
+});
+
