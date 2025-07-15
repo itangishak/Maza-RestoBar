@@ -290,6 +290,40 @@ require_privilege(['Boss','Manager','User']);
 
 <!-- Hidden receipt for printing -->
 <div id="receiptContent"></div>
+
+<!-- Fallback printer implementation -->
+<script>
+  if (!window.printer) {
+    window.printer = {
+      printHTML: async function(html) {
+        return new Promise(resolve => {
+          const w = window.open('', '_blank');
+          w.document.write(html);
+          w.document.close();
+          w.focus();
+          w.print();
+          w.close();
+          resolve();
+        });
+      },
+      getLogoBase64: async function() {
+        try {
+          const resp = await fetch('../LogoMaza.png');
+          const blob = await resp.blob();
+          return await new Promise((res, rej) => {
+            const reader = new FileReader();
+            reader.onloadend = () => res(reader.result);
+            reader.onerror = rej;
+            reader.readAsDataURL(blob);
+          });
+        } catch (e) {
+          console.error('Failed to load logo:', e);
+          return '';
+        }
+      }
+    };
+  }
+</script>
   <?php include_once './footer.php'; ?>
 
 <script>
