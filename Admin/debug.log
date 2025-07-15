@@ -1833,3 +1833,37 @@ Stack trace:
 
 [15-Jul-2025 19:18:58 Europe/Berlin] Processing MENU sale
 [15-Jul-2025 19:18:58 Europe/Berlin] Sale processed and committed successfully
+[15-Jul-2025 19:33:56 Europe/Berlin] ============================================
+[15-Jul-2025 19:33:56 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-07-15 19:33:56
+[15-Jul-2025 19:33:56 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-07-15
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[15-Jul-2025 19:33:56 Europe/Berlin] Processing BUFFET sale
+[15-Jul-2025 19:33:56 Europe/Berlin] Sale processed and committed successfully
+[15-Jul-2025 19:34:32 Europe/Berlin] ============================================
+[15-Jul-2025 19:34:32 Europe/Berlin] SELL ITEM ACTION CALLED: 2025-07-15 19:34:32
+[15-Jul-2025 19:34:32 Europe/Berlin] POST DATA: Array
+(
+    [sale_type] => buffet
+    [include_buffet] => 1
+    [buffet_date] => 2025-07-15
+    [buffet_time] => Evening
+    [dishes_sold] => 1
+    [buffet_price] => 20000
+    [discount_amount] => 0
+    [discount_reason] => 
+    [total_amount] => 20000.00
+)
+
+[15-Jul-2025 19:34:32 Europe/Berlin] Processing BUFFET sale
+[15-Jul-2025 19:34:32 Europe/Berlin] Sale processed and committed successfully
