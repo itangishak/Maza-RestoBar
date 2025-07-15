@@ -1111,12 +1111,7 @@ $("#confirmSale").on("click", async function() {
       $("#receiptContent #receiptLogo").remove(); // Remove logo on error
     }
 
-    // Append the preview details without its header
-    const previewClone = $("#previewContent").clone();
-    previewClone.find('.text-center.mb-4').remove();
-    $("#receiptContent").append(previewClone.html());
-
-    // Get final content after adding details and logo
+    // Get final content after logo setup
     const finalContent = $("#receiptContent").html();
 // Print HTML
     const html = `
@@ -1258,7 +1253,6 @@ $("#confirmSale").on("click", async function() {
                   
       
                   <div class="receipt-section">
-                    <h3>AUDIT COPY</h3>
                     ${finalContent}
                   </div>
                 </div>
