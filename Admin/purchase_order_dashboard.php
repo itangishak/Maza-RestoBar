@@ -256,6 +256,7 @@ if (!isset($_SESSION['UserId'])) {
               $('#editPurchaseOrderModal').modal('hide');
               Swal.fire('Success', response.message, 'success');
               table.ajax.reload();
+              printUpdatedOrder(response.purchase_id);
             } else {
               Swal.fire('Error', response.message, 'error');
             }
@@ -421,6 +422,143 @@ if (!isset($_SESSION['UserId'])) {
         calculateOrderTotal();
       });
     });
+  </script>
+
+  <!-- Fallback printer if no integration available -->
+  <script>
+    if (!window.printer) {
+      window.printer = {
+        printHTML: async function(html) {
+          return new Promise(resolve => {
+            const w = window.open('', '_blank');
+            w.document.write(html);
+            w.document.close();
+            w.focus();
+            w.print();
+            w.close();
+            resolve();
+          });
+        },
+        getLogoBase64: async function() {
+          try {
+            const resp = await fetch('../LogoMaza.png');
+            const blob = await resp.blob();
+            return await new Promise((res, rej) => {
+              const reader = new FileReader();
+              reader.onloadend = () => res(reader.result);
+              reader.onerror = rej;
+              reader.readAsDataURL(blob);
+            });
+          } catch (e) {
+            console.error('Failed to load logo:', e);
+            return '';
+          }
+        }
+      };
+    }
+
+    async function printUpdatedOrder(purchaseId) {
+      try {
+        const res = await $.get('generate_purchase_receipt.php', { id: purchaseId });
+        if (res.status === 'success') {
+          await printReceipt(res.receiptContent);
+        } else {
+          Swal.fire('Error', res.message || 'Failed to generate receipt', 'error');
+        }
+      } catch (e) {
+        Swal.fire('Error', 'Failed to generate receipt', 'error');
+      }
+    }
+
+    async function printReceipt(receiptContent) {
+      const div = document.createElement('div');
+      div.id = 'receiptContent';
+      div.style.display = 'none';
+      div.innerHTML = receiptContent;
+      document.body.appendChild(div);
+
+      try {
+        const logoData = await window.printer.getLogoBase64();
+        const logoEl = div.querySelector('#receiptLogo');
+        if (logoEl && logoData) {
+          logoEl.src = logoData;
+        }
+      } catch (e) {
+        console.error('Logo load failed:', e);
+      }
+
+      const finalContent = div.innerHTML;
+      const html = `
+        <html>
+        <head>
+          <style>
+            @page { margin: 0; }
+            body { margin: 0; padding: 0; }
+            #receiptContent {
+              margin: 0;
+              padding: 0;
+              width: 220px;
+              font-family: Arial, sans-serif;
+              text-align: center;
+              font-size: 10px;
+              line-height: 1.2;
+            }
+            #receiptContent img,
+            #receiptContent h2,
+            #receiptContent p,
+            #receiptContent hr {
+              margin: 0;
+              padding: 0;
+            }
+            #receiptContent img {
+              width: 100px;
+              margin: 0 auto 5px auto;
+              display: block;
+            }
+            #receiptContent h2 {
+              font-size: 14px;
+              font-weight: bold;
+            }
+            #receiptContent p {
+              margin: 5px 0;
+              font-size: 10px;
+            }
+            #receiptContent hr {
+              border: none;
+              border-top: 1px dashed #000;
+              margin: 6px 0;
+              width: 100%;
+            }
+            #receiptContent table {
+              width: 100%;
+              margin: 5px 0;
+              border-collapse: collapse;
+              font-size: 9px;
+            }
+            #receiptContent th,
+            #receiptContent td {
+              border: 1px solid #000;
+              padding: 3px;
+              text-align: center;
+            }
+            #receiptContent .text-end {
+              text-align: right;
+            }
+          </style>
+        </head>
+        <body>
+          <div id="receiptContent">${finalContent}</div>
+        </body>
+        </html>`;
+
+      try {
+        await window.printer.printHTML(html);
+      } catch (err) {
+        console.error('Print failed:', err);
+      } finally {
+        document.body.removeChild(div);
+      }
+    }
   </script>
 
   <!-- Translation script with fallback -->
