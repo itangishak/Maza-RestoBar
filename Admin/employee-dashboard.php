@@ -297,32 +297,44 @@ $chartHoursJson  = json_encode($historyHours);
   
   <!-- Attendance History Chart -->
   <script>
-    const ctx = document.getElementById('attendanceChart').getContext('2d');
-    const attendanceChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: <?php echo $chartLabelsJson; ?>,
-        datasets: [{
-          label: 'Working Hours',
-          data: <?php echo $chartHoursJson; ?>,
-          borderColor: 'rgba(75, 192, 192, 1)',
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          fill: false,
-          tension: 0.2
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: { y: { beginAtZero: true } },
-        plugins: {
-          legend: { position: 'top' },
-          title: {
-            display: true,
-            text: document.querySelector('[data-key="dashboard.workingHoursChartTitle"]')?.textContent
+    function initAttendanceChart() {
+      const ctx = document.getElementById('attendanceChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: <?php echo $chartLabelsJson; ?>,
+          datasets: [{
+            label: 'Working Hours',
+            data: <?php echo $chartHoursJson; ?>,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            fill: false,
+            tension: 0.2
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: { y: { beginAtZero: true } },
+          plugins: {
+            legend: { position: 'top' },
+            title: {
+              display: true,
+              text: document.querySelector('[data-key="dashboard.workingHoursChartTitle"]')?.textContent
+            }
           }
         }
+      });
+    }
+
+    function waitForChartJs() {
+      if (window.Chart) {
+        initAttendanceChart();
+      } else {
+        setTimeout(waitForChartJs, 50);
       }
-    });
+    }
+
+    waitForChartJs();
   </script>
 </body>
 </html>
