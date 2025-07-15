@@ -29,9 +29,8 @@
       </li><!-- Fin Notification Nav -->
 
       <!-- Profile Nav -->
-      <li class="nav-item dropdown">
-        <?php include_once './profil/profil_nav.php'; ?>
-      </li><!-- Fin Profile Nav -->
+      <?php include_once './profil/profil_nav.php'; ?>
+      <!-- Fin Profile Nav -->
     </ul>
   </nav><!-- Fin barre d’icônes -->
 </header>
