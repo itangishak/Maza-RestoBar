@@ -1243,16 +1243,15 @@ $("#confirmSale").on("click", async function() {
                 <div class="receipt-container">
                   <!-- CLIENT COPY -->
                   <div class="receipt-section">
-                    <h3>CLIENT COPY</h3>
                     ${finalContent}
                   </div>
                   
                   <!-- DIVIDER -->
                   <div class="divider">
-                    <div class="divider-text">✂ CUT HERE ✂</div>
+                   
                   </div>
                   
-                  <!-- AUDIT COPY -->
+      
                   <div class="receipt-section">
                     <h3>AUDIT COPY</h3>
                     ${finalContent}
