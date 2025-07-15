@@ -19,7 +19,7 @@
 
     <!-- POS System -->
     <?php
-      $pos_pages = ['pos.php', 'sales-history.php', 'buffet_counter.php'];
+      $pos_pages = ['pos.php', 'sales-history.php'];
       $is_pos_active = in_array($current_page, $pos_pages);
     ?>
     <li class="nav-item">
@@ -54,15 +54,6 @@
             <i class="bi bi-circle"></i>
             <!-- data-key="sidebar.salesHistory" -->
             <span class="nav-text" data-key="sidebar.salesHistory">Sales History</span>
-          </a>
-        </li>
-        <li>
-          <a 
-            href="./buffet_counter.php" 
-            class="<?php echo ($current_page == 'buffet_counter.php') ? 'active' : ''; ?>"
-          >
-            <i class="bi bi-circle"></i>
-            <span class="nav-text">Compteur des buffets</span>
           </a>
         </li>
       </ul>
@@ -406,12 +397,6 @@
       </ul>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="buffet_counter.php">
-        <i class="bi bi-calculator"></i>
-        <span>Compteur des buffets</span>
-      </a>
-    </li>
 
     <li class="nav-item">
       <a class="nav-link" href="employees.php">

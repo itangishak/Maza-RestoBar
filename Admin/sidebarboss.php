@@ -19,7 +19,7 @@
 
     <!-- POS System -->
     <?php
-      $pos_pages = ['pos.php', 'sales-history.php', 'buffet_counter.php'];
+      $pos_pages = ['pos.php', 'sales-history.php'];
       $is_pos_active = in_array($current_page, $pos_pages);
     ?>
     <li class="nav-item">

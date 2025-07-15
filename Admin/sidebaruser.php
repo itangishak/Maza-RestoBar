@@ -53,13 +53,6 @@
       </a>
     </li>
 
-    <!-- New items -->
-    <li class="nav-item">
-      <a class="nav-link" href="buffet_counter.php">
-        <i class="bi bi-calculator"></i>
-        <span>Compteur des buffets</span>
-      </a>
-    </li>
 
     <!-- Inventory -->
     <li class="nav-item">
