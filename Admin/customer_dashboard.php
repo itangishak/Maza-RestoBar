@@ -15,14 +15,10 @@ if (!isset($_SESSION['UserId'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- DataTables CSS -->
-    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css" rel="stylesheet">
 
     <!-- SweetAlert2 CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
     <?php include_once './header.php'; ?>
     <style>
         .main-container {
@@ -198,19 +194,16 @@ if (!isset($_SESSION['UserId'])) {
     <?php include_once './footer.php'; ?>
 
     <!-- JS Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/vendor/DataTables/jquery.dataTables.min.js"></script>
+    <script src="assets/vendor/DataTables/dataTables.buttons.min.js"></script>
+    <script src="assets/vendor/DataTables/buttons.html5.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.js"></script>
     <!-- Pour Copier, Excel, PDF, et Imprimer -->
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="assets/vendor/DataTables/buttons.print.min.js"></script>
+    <script src="assets/vendor/DataTables/jszip.min.js"></script>
+    <script src="assets/vendor/DataTables/pdfmake.min.js"></script>
+    <script src="assets/vendor/DataTables/vfs_fonts.js"></script>
     <script>
         $(document).ready(function () {
             // Initialiser DataTable

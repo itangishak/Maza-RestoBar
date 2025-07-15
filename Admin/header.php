@@ -24,9 +24,9 @@
 <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
 <!-- Local DataTables CSS -->
-<link href="assets/vendor/datatables/jquery.dataTables.min.css" rel="stylesheet">
-<link href="assets/vendor/datatables/dataTables.bootstrap5.min.css" rel="stylesheet">
-<link href="assets/vendor/datatables/buttons.dataTables.min.css" rel="stylesheet">
+<link href="assets/vendor/DataTables/jquery.dataTables.min.css" rel="stylesheet">
+<link href="assets/vendor/DataTables/dataTables.bootstrap5.min.css" rel="stylesheet">
+<link href="assets/vendor/DataTables/buttons.dataTables.min.css" rel="stylesheet">
 
 <!-- Local SweetAlert2 CSS -->
 <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
@@ -57,10 +57,10 @@
   // Function to load scripts in sequence
   function loadScripts() {
     const scripts = [
-      'assets/vendor/datatables/jquery.dataTables.min.js',
-      'assets/vendor/datatables/dataTables.bootstrap5.min.js',
-      'assets/vendor/datatables/dataTables.buttons.min.js',
-      'assets/vendor/datatables/buttons.print.min.js'
+      'assets/vendor/DataTables/jquery.dataTables.min.js',
+      'assets/vendor/DataTables/dataTables.bootstrap5.min.js',
+      'assets/vendor/DataTables/dataTables.buttons.min.js',
+      'assets/vendor/DataTables/buttons.print.min.js'
     ];
 
     function loadScript(src) {
@@ -112,10 +112,10 @@
     console.log('jQuery is available, loading DataTables scripts...');
     
     const scripts = [
-      'assets/vendor/datatables/jquery.dataTables.min.js',
-      'assets/vendor/datatables/dataTables.bootstrap5.min.js',
-      'assets/vendor/datatables/dataTables.buttons.min.js',
-      'assets/vendor/datatables/buttons.print.min.js'
+      'assets/vendor/DataTables/jquery.dataTables.min.js',
+      'assets/vendor/DataTables/dataTables.bootstrap5.min.js',
+      'assets/vendor/DataTables/dataTables.buttons.min.js',
+      'assets/vendor/DataTables/buttons.print.min.js'
     ];
     
     function loadScriptSequentially(index) {

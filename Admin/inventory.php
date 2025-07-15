@@ -15,11 +15,11 @@ if (!isset($_SESSION['UserId'])) {
     <title data-key="inventory.title">Inventory Management</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/5.3.0/bootstrap.min.css">
     <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="assets/vendor/DataTables/dataTables.bootstrap5.min.css">
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
 
     <?php include_once './header.php'; ?>
 
@@ -235,22 +235,22 @@ if (!isset($_SESSION['UserId'])) {
     <?php include_once './footer.php'; ?>
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap/5.3.0/bootstrap.bundle.min.js"></script>
     <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="assets/vendor/DataTables/jquery.dataTables.min.js"></script>
+    <script src="assets/vendor/DataTables/dataTables.bootstrap5.min.js"></script>
     <!-- DataTables Buttons -->
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+    <script src="assets/vendor/DataTables/dataTables.buttons.min.js"></script>
+    <script src="assets/vendor/DataTables/dataTables.buttons.bootstrap5.min.js"></script>
+    <script src="assets/vendor/DataTables/jszip.min.js"></script>
+    <script src="assets/vendor/DataTables/pdfmake.min.js"></script>
+    <script src="assets/vendor/DataTables/vfs_fonts.js"></script>
+    <script src="assets/vendor/DataTables/buttons.html5.min.js"></script>
+    <script src="assets/vendor/DataTables/buttons.print.min.js"></script>
     <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/sweetalert2.min.js"></script>
 
     <script>
     $(document).ready(function () {
@@ -303,8 +303,8 @@ if (!isset($_SESSION['UserId'])) {
             ],
             language: {
                 url: currentLang === 'fr'
-                    ? 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/fr-FR.json'
-                    : 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/en-GB.json'
+                    ? 'languages/datatables-fr.json'
+                    : 'languages/datatables-en.json'
             }
         });
 

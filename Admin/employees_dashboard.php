@@ -16,9 +16,6 @@ if (!isset($_SESSION['UserId'])) {
     <title data-key="report.employeesManagement"></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS Libraries -->
-    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <?php include_once './header.php'; ?>
     <style>
         .main-container {
@@ -129,12 +126,6 @@ if (!isset($_SESSION['UserId'])) {
     <?php include_once './footer.php'; ?>
 
     <!-- JS Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
     $(document).ready(function () {
