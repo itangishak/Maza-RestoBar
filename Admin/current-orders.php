@@ -117,8 +117,6 @@ if (!isset($_SESSION['UserId'])) {
     <!-- =================================
          JS Libraries in correct order
          ================================= -->
-    <!-- jQuery first -->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- DataTables JS -->
     <!-- DataTables Buttons and Print extension -->
     <!-- Bootstrap Bundle -->

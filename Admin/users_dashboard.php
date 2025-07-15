@@ -153,9 +153,8 @@ if (!isset($_SESSION['UserId'])) {
 
     <!-- ======================================
          JS Libraries: jQuery, DataTables, Buttons, Bootstrap
-         (Ensure jQuery and DataTables load before your initialization code)
-         ====================================== -->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
+        (Ensure jQuery and DataTables load before your initialization code)
+        ====================================== -->
     <!-- Include the print button extension -->
 
     <script>

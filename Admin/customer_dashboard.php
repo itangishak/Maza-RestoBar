@@ -194,7 +194,6 @@ if (!isset($_SESSION['UserId'])) {
     <?php include_once './footer.php'; ?>
 
     <!-- JS Libraries -->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/vendor/DataTables/jquery.dataTables.min.js"></script>
     <script src="assets/vendor/DataTables/dataTables.buttons.min.js"></script>
     <script src="assets/vendor/DataTables/buttons.html5.min.js"></script>
