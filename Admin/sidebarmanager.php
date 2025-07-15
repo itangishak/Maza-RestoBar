@@ -412,28 +412,6 @@
         <span>Compteur des buffets</span>
       </a>
     </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="employees.php">
-        <i class="bi bi-people"></i>
-        <span>Employees</span>
-      </a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="reports.php">
-        <i class="bi bi-file-earmark-text"></i>
-        <span>Reports</span>
-      </a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="settings.php">
-        <i class="bi bi-gear"></i>
-        <span>Settings</span>
-      </a>
-    </li>
-
   </ul>
 </aside>
 
