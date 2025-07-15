@@ -34,7 +34,7 @@ require_privilege(['Boss','Manager','User']);
    /* Receipt styling for printing */
     #receiptContent {
       display: none; /* Hidden by default */
-      width: 200px; /* Width optimized for Epson TM-T20 */
+      width: 300px; /* Width optimized for Epson TM-T20 */
       margin: 0 auto; /* Changed from '0 0 0 10px' to '0 auto' for proper centering */
       padding: 0;
       font-family: Arial, sans-serif;
