@@ -234,8 +234,6 @@ if (!isset($_SESSION['UserId'])) {
     <!-- Include Footer -->
     <?php include_once './footer.php'; ?>
 
-    <!-- jQuery -->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="assets/vendor/bootstrap/5.3.0/bootstrap.bundle.min.js"></script>
     <!-- DataTables JS -->

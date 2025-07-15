@@ -18,8 +18,6 @@ if (!isset($_SESSION['UserId'])) {
   <!-- DataTables CSS -->
   <!-- SweetAlert2 CSS -->
 
-  <!-- jQuery -->
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
   <!-- DataTables JS -->
   <!-- Bootstrap JS -->
   <!-- SweetAlert2 JS -->
