@@ -1092,9 +1092,9 @@ $("#confirmSale").on("click", async function() {
           @page { margin: 0; }
           body { margin: 0; padding: 0; }
           #receiptContent {
-            margin: 0 0 0 10px; /* Added 10px left margin */
+            margin: 0 auto; /* Center content for thermal printer */
             padding: 0;
-            width: 200px; /* Reduced to fit with margin */
+            width: 200px; /* Width optimized for Epson TM-T20 */
             font-family: Arial, sans-serif;
             text-align: center;
             font-size: 12px;
