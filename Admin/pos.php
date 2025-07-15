@@ -1358,7 +1358,7 @@ $(document).ready(function() {
   // Event listeners
   buffetDate.addEventListener('change', loadDishesSold);
   timeOfDaySelect.addEventListener('change', loadDishesSold);
-  document.getElementById('saleType').addEventListener('change', function(){
+  document.getElementById('sale_type').addEventListener('change', function(){
     // Initialize with today's date and prepare buffet UI elements
     autoSelectDateAndDayTime();
   
@@ -1368,7 +1368,7 @@ $(document).ready(function() {
   );
 
   // Initialize correctly if buffet is pre-selected
-  if (document.getElementById('saleType').value === 'buffet') {
+  if (document.getElementById('sale_type').value === 'buffet') {
     autoSelectDateAndDayTime();
   }
 });
