@@ -1192,14 +1192,20 @@ $("#confirmSale").on("click", async function() {
               <head>
                 <style>
                   @page { margin: 0; }
-                  body { margin: 0; padding: 0; }
-                  .receipt-container { 
+                  html, body {
+                    margin: 0;
+                    padding: 0;
+                    width: 58mm; /* keep same width as single receipt */
+                    font-family: Arial, sans-serif;
+                  }
+                  .receipt-container {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
                   }
                   .receipt-section {
-                    margin: 0 auto; /* Changed from '0 0 0 10px' to '0 auto' for proper centering */
+                    width: 100%;
+                    margin: 0 auto; /* ensure section is centered */
                     padding: 0 0 20px 0;
                     font-family: Arial, sans-serif;
                     text-align: center;
