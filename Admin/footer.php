@@ -31,7 +31,14 @@
       
       // Load vendor scripts in sequence to ensure dependencies
       loadScript("assets/vendor/apexcharts/apexcharts.min.js");
-      loadScript("assets/vendor/bootstrap/5.3.0/bootstrap.bundle.min.js");
+      loadScript("assets/vendor/bootstrap/5.3.0/bootstrap.bundle.min.js", function() {
+        // Ensure dropdowns are properly initialized when Bootstrap is loaded
+        document.querySelectorAll('.dropdown-toggle').forEach(function(el) {
+          if (typeof bootstrap !== 'undefined') {
+            new bootstrap.Dropdown(el);
+          }
+        });
+      });
       loadScript("assets/vendor/chart.js/chart.umd.js");
       loadScript("assets/vendor/echarts/echarts.min.js");
       loadScript("assets/vendor/quill/quill.js");
