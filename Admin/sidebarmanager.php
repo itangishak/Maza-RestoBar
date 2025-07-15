@@ -56,15 +56,6 @@
             <span class="nav-text" data-key="sidebar.salesHistory">Sales History</span>
           </a>
         </li>
-        <li>
-          <a 
-            href="./buffet_counter.php" 
-            class="<?php echo ($current_page == 'buffet_counter.php') ? 'active' : ''; ?>"
-          >
-            <i class="bi bi-circle"></i>
-            <span class="nav-text">Compteur des buffets</span>
-          </a>
-        </li>
       </ul>
     </li>
 
@@ -310,18 +301,6 @@
       </a>
     </li>
 
-    <!-- QR Ordering / Web Store -->
-    <li class="nav-item">
-      <a 
-        class="nav-link <?php echo ($current_page == 'qr-ordering.php') ? 'active' : 'collapsed'; ?>" 
-        href="./qr-ordering.php"
-      >
-        <i class="bi bi-qr-code-scan"></i>
-        <!-- data-key="sidebar.qrOrdering" -->
-        <span class="nav-text" data-key="sidebar.qrOrdering">QR Ordering / Web Store</span>
-      </a>
-    </li>
-
     <!-- Kitchen Orders (KOT) -->
     <?php
       $kot_pages = ['current-kot.php', 'kot-history.php'];
@@ -404,13 +383,6 @@
           </a>
         </li>
       </ul>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="buffet_counter.php">
-        <i class="bi bi-calculator"></i>
-        <span>Compteur des buffets</span>
-      </a>
     </li>
   </ul>
 </aside>
