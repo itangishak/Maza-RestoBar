@@ -65,11 +65,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
-  // Add this code to initialize Bootstrap dropdowns
-  var dropdownElementList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'));
-  var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-    return new bootstrap.Dropdown(dropdownToggleEl);
-  });
+  // Fix for Bootstrap dropdowns
+  // Make sure Bootstrap is available
+  if (typeof bootstrap !== 'undefined') {
+    // Initialize all dropdowns on the page
+    var dropdownElementList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'));
+    dropdownElementList.forEach(function(dropdownToggleEl) {
+      new bootstrap.Dropdown(dropdownToggleEl);
+    });
+  } else {
+    // If Bootstrap is not available yet, wait and try again
+    setTimeout(function() {
+      if (typeof bootstrap !== 'undefined') {
+        var dropdownElementList = [].slice.call(document.querySelectorAll('[data-bs-toggle="dropdown"]'));
+        dropdownElementList.forEach(function(dropdownToggleEl) {
+          new bootstrap.Dropdown(dropdownToggleEl);
+        });
+      }
+    }, 500); // Wait 500ms and try again
+  }
 });
 </script>
 
