@@ -34,8 +34,8 @@ require_privilege(['Boss','Manager','User']);
    /* Receipt styling for printing */
     #receiptContent {
       display: none; /* Hidden by default */
-      width: 200px; /* Reduced to fit with margin */
-      margin: 0 0 0 10px; /* Added 10px left margin */
+      width: 72mm; /* Match Epson TM-T20 paper width */
+      margin: 0 auto; /* Center when visible */
       padding: 0;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -1092,9 +1092,9 @@ $("#confirmSale").on("click", async function() {
           @page { margin: 0; }
           body { margin: 0; padding: 0; }
           #receiptContent {
-            margin: 0 0 0 10px; /* Added 10px left margin */
+            margin: 0 auto; /* Centered for printing */
             padding: 0;
-            width: 200px; /* Reduced to fit with margin */
+            width: 72mm; /* Match Epson TM-T20 paper width */
             font-family: Arial, sans-serif;
             text-align: center;
             font-size: 12px;
@@ -1168,14 +1168,16 @@ $("#confirmSale").on("click", async function() {
                 <style>
                   @page { margin: 0; }
                   body { margin: 0; padding: 0; }
-                  .receipt-container { 
+                  .receipt-container {
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     width: 100%;
                   }
                   .receipt-section {
-                    margin: 0 0 0 10px;
+                    margin: 0 auto;
                     padding: 0 0 20px 0;
+                    width: 72mm; /* Match Epson TM-T20 paper width */
                     font-family: Arial, sans-serif;
                     text-align: center;
                     font-size: 12px;
