@@ -124,26 +124,24 @@ if (isset($_SESSION['customer_id'])) {
 </div>
 <!-- JavaScript Libraries -->
 <!-- jQuery now in header -->
-<script src="./Client/js/main.js"></script>
-<script src="Client/lib/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="./Client/lib/wow/wow.min.js"></script>
+<script src="./Admin/assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <!-- Other Libraries -->
-<script src="./Client/lib/easing/easing.min.js"></script>
-<script src="./Client/lib/waypoints/waypoints.min.js"></script>
-<script src="./Client/lib/counterup/counterup.min.js"></script>
-<script src="./Client/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <!-- Tempus Dominus -->
-<script src="./Client/lib/moment/moment.min.js"></script>
-<script src="./Client/lib/moment/moment-timezone.min.js"></script>
-<script src="./Client/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- SweetAlert2 (for pop-up messages) -->
-<script src="Client/lib/sweetalert2/sweetalert2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
 <!-- Lightbox JS -->
-<script src="Client/lib/lightbox/lightbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 <!-- Bootstrap JS -->
-<script 
-    src="Client/lib/bootstrap/bootstrap.bundle.min.js">
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
